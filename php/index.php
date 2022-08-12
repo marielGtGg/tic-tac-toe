@@ -1,0 +1,1 @@
+<div class="rouge"><?php echo wp_get_current_user()->display_name; ?></div>
