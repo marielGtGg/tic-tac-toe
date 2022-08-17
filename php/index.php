@@ -1,40 +1,10 @@
 <div id="ticTacToeLudo101">
-    <div>
-        <?php echo wp_get_current_user()->display_name; ?>
-    </div>
-    
     <div id="pluginHeader">
         <img src="#" alt="Logo">
         <h1 id="pluginTitle">Tic-Tac-Toe</h1>
         <p id="pluginTitleSub">Que le meilleur gagne!</p>
     </div>
     <div id="pluginBody">
-        <div class="grid-container ">
-            <div class="grille h1"></div>
-            <div class="grille h2"></div>
-            <div class="grille v1"></div>
-            <div class="grille v2"></div>
-            <div class="case A1 "></div>
-            <div class="case A2 "></div>
-            <div class="case A3 "></div>
-            <div class="case B1 "></div>
-            <div class="case B2 "></div>
-            <div class="case B3 "></div>
-            <div class="case C1 "></div>
-            <div class="case C2 "></div>
-            <div class="case C3 "></div>
-        </div>
-        <!-- <section id="pluginGameGrid">
-            <div id="case1"></div>
-            <div id="case2"></div>
-            <div id="case3"></div>
-            <div id="case4"></div>
-            <div id="case5"></div>
-            <div id="case6"></div>
-            <div id="case7"></div>
-            <div id="case8"></div>
-            <div id="case9"></div>
-        </section> -->
         <section id="pluginPlayers">
             <div id="pluginHostPlayer">
                 <h3 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h3>
@@ -54,6 +24,32 @@
                     <li id="pluginGuestTie">1 nulle</li>
             </div>
         </section>
+       <section class="pluginGameGrid">
+            <div class="pluginGameMatrix h1"></div>
+            <div class="pluginGameMatrix h2"></div>
+            <div class="pluginGameMatrix v1"></div>
+            <div class="pluginGameMatrix v2"></div>
+            <div class="pluginGameCell A1"></div>
+            <div class="pluginGameCell A2"></div>
+            <div class="pluginGameCell A3"></div>
+            <div class="pluginGameCell B1"></div>
+            <div class="pluginGameCell B2"></div>
+            <div class="pluginGameCell B3"></div>
+            <div class="pluginGameCell C1"></div>
+            <div class="pluginGameCell C2"></div>
+            <div class="pluginGameCell C3"></div>
+        </section>
+        <!-- <section id="pluginGameGrid">
+            <div id="case1"></div>
+            <div id="case2"></div>
+            <div id="case3"></div>
+            <div id="case4"></div>
+            <div id="case5"></div>
+            <div id="case6"></div>
+            <div id="case7"></div>
+            <div id="case8"></div>
+            <div id="case9"></div>
+        </section> -->
         <section id="pluginParameters">
             <form>
                 <section id="pluginFormFirstPlayer">

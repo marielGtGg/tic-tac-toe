@@ -2,7 +2,7 @@
     margin: 0;
 }
 
-#ticTacToeLudo101 .grid-container {
+#ticTacToeLudo101 .pluginGameGrid {
     display: grid;
     height: 90vmin;
     width: 90vmin;
@@ -17,7 +17,7 @@
     "C1 .. C2 .. C3";
 }
 
-#ticTacToeLudo101 .grille, .case {
+#ticTacToeLudo101 .pluginGameMatrix, .pluginGameCell {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -107,7 +107,7 @@
     background-image: url(../images/x3.svg);
 }
 
-#ticTacToeLudo101 .grid-container.d1::after {
+#ticTacToeLudo101 .pluginGameGrid.d1::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -117,7 +117,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.d2::after {
+#ticTacToeLudo101 .pluginGameGrid.d2::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -127,7 +127,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.r1::after {
+#ticTacToeLudo101 .pluginGameGrid.r1::after {
     content: '';
     grid-row: 1;
     grid-column: 1 / -1;
@@ -137,7 +137,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.r2::after {
+#ticTacToeLudo101 .pluginGameGrid.r2::after {
     content: '';
     grid-row: 3;
     grid-column: 1 / -1;
@@ -147,7 +147,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.r3::after {
+#ticTacToeLudo101 .pluginGameGrid.r3::after {
     content: '';
     grid-row: 5;
     grid-column: 1 / -1;
@@ -157,7 +157,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.c1::after {
+#ticTacToeLudo101 .pluginGameGrid.c1::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1;
@@ -167,7 +167,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.c2::after {
+#ticTacToeLudo101 .pluginGameGrid.c2::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 3;
@@ -177,7 +177,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .grid-container.c3::after {
+#ticTacToeLudo101 .pluginGameGrid.c3::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 5;
