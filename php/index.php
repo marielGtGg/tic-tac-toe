@@ -46,18 +46,19 @@
                 </ul>
             </div>
             <div id="pluginGuestPlayer">
-                <h3 class="pluginPlayerName" id="pluginHost">Monsieur Tac</h3>
+                <h3 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h3>
                 <h4 class="pluginPlayerNumber">Joueur 2</h4>
                 <ul>
                     <li id="pluginGuestWon">1 victoire</li>
                     <li id="pluginGuestLost">3 défaite </li>
                     <li id="pluginGuestTie">1 nulle</li>
+                </ul>
             </div>
         </section>
         <section id="pluginParameters">
             <form>
                 <section id="pluginFormFirstPlayer">
-                    <p>Premier joueur</p>
+                    <h5>Premier joueur</h5>
                     <div>
                       <input type="radio" id="pluginRandom"
                        name="pluginFirstPlayer" value="formRandom">
@@ -76,8 +77,8 @@
                       <label for="pluginFirstGuest">Joueur 2</label>
                     </div>
                 </section>
-                <section id="pluginFormFirstPlayer">
-                    <p>Premier joueur</p>
+                <section id="pluginFormTimeSelection">
+                    <h5>Premier joueur</h5>
                     <div>
                       <input type="radio" id="plugin15s"
                        name="pluginTimeRange" value="form15s">
