@@ -20,25 +20,27 @@
                 <h4 class="pluginPlayerNumber">Joueur 2</h4>
                 <ul>
                     <li id="pluginGuestWon">1 victoire</li>
-                    <li id="pluginGuestLost">3 défaite </li>
+                    <li id="pluginGuestLost">2 défaites </li>
                     <li id="pluginGuestTie">1 nulle</li>
                 </ul>
             </div>
         </section>
-       <section class="pluginGameGrid">
-            <div class="pluginGameMatrix h1"></div>
-            <div class="pluginGameMatrix h2"></div>
-            <div class="pluginGameMatrix v1"></div>
-            <div class="pluginGameMatrix v2"></div>
-            <div class="pluginGameCell A1"></div>
-            <div class="pluginGameCell A2"></div>
-            <div class="pluginGameCell A3"></div>
-            <div class="pluginGameCell B1"></div>
-            <div class="pluginGameCell B2"></div>
-            <div class="pluginGameCell B3"></div>
-            <div class="pluginGameCell C1"></div>
-            <div class="pluginGameCell C2"></div>
-            <div class="pluginGameCell C3"></div>
+       <section id="pluginGameContainer">
+            <div id="pluginGameGrid">
+                <div class="pluginGameMatrix H1"></div>
+                <div class="pluginGameMatrix H2"></div>
+                <div class="pluginGameMatrix V1"></div>
+                <div class="pluginGameMatrix V2"></div>
+                <div class="pluginGameCell A1"></div>
+                <div class="pluginGameCell A2"></div>
+                <div class="pluginGameCell A3"></div>
+                <div class="pluginGameCell B1"></div>
+                <div class="pluginGameCell B2"></div>
+                <div class="pluginGameCell B3"></div>
+                <div class="pluginGameCell C1"></div>
+                <div class="pluginGameCell C2"></div>
+                <div class="pluginGameCell C3"></div>
+            </div>
         </section>
         <!-- <section id="pluginGameGrid">
             <div id="case1"></div>

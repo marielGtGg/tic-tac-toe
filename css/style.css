@@ -1,12 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Fira+Sans:wght@200;400;600&family=Fugaz+One&family=Lobster&display=swap');
+
 #ticTacToeLudo101 {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#ticTacToeLudo101 div, #ticTacToeLudo101 h1, #ticTacToeLudo101 h2, #ticTacToeLudo101 h3, #ticTacToeLudo101 h4, #ticTacToeLudo101 h5 {
+    font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
     margin: 0;
 }
 
-#ticTacToeLudo101 .pluginGameGrid {
+/*-----Grille-----*/
+
+#ticTacToeLudo101 #pluginGameContainer {
+    position: relative;
+    padding-top: 90%;
+    width: 90%;
+    margin: 5% auto;
+}
+
+#ticTacToeLudo101 #pluginGameGrid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: grid;
-    height: 90vmin;
-    width: 90vmin;
-    margin: 5vmin auto;
     grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
     grid-template-rows: 6fr 1fr 6fr 1fr 6fr;
     grid-template-areas: 
@@ -23,25 +43,25 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .h1 {
+#ticTacToeLudo101 .H1 {
     grid-column: 2;
     grid-row: 1 / -1;
     background-image: url(../images/h1.svg);
 }
 
-#ticTacToeLudo101 .h2 {
+#ticTacToeLudo101 .H2 {
     grid-column: 4;
     grid-row: 1 / -1;
     background-image: url(../images/h2.svg);
 }
 
-#ticTacToeLudo101 .v1 {
+#ticTacToeLudo101 .V1 {
     grid-column: 1 / -1;
     grid-row: 2;
     background-image: url(../images/v1.svg);
 }
 
-#ticTacToeLudo101 .v2 {
+#ticTacToeLudo101 .V2 {
     grid-column: 1 / -1;
     grid-row: 4;
     background-image: url(../images/v2.svg);
@@ -107,7 +127,7 @@
     background-image: url(../images/x3.svg);
 }
 
-#ticTacToeLudo101 .pluginGameGrid.d1::after {
+#ticTacToeLudo101 #pluginGameGrid.D1::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -117,7 +137,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.d2::after {
+#ticTacToeLudo101 #pluginGameGrid.D2::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -127,7 +147,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.r1::after {
+#ticTacToeLudo101 #pluginGameGrid.R1::after {
     content: '';
     grid-row: 1;
     grid-column: 1 / -1;
@@ -137,7 +157,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.r2::after {
+#ticTacToeLudo101 #pluginGameGrid.R2::after {
     content: '';
     grid-row: 3;
     grid-column: 1 / -1;
@@ -147,7 +167,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.r3::after {
+#ticTacToeLudo101 #pluginGameGrid.R3::after {
     content: '';
     grid-row: 5;
     grid-column: 1 / -1;
@@ -157,7 +177,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.c1::after {
+#ticTacToeLudo101 #pluginGameGrid.C1::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 1;
@@ -167,7 +187,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.c2::after {
+#ticTacToeLudo101 #pluginGameGrid.C2::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 3;
@@ -177,7 +197,7 @@
     background-position: center;
 }
 
-#ticTacToeLudo101 .pluginGameGrid.c3::after {
+#ticTacToeLudo101 #pluginGameGrid.C3::after {
     content: '';
     grid-row: 1 / -1;
     grid-column: 5;
