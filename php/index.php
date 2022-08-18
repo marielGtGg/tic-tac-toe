@@ -7,8 +7,8 @@
     <div id="pluginBody">
         <section id="pluginPlayers">
             <div id="pluginHostPlayer" class="box-shadow">
-                <h3 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h3>
-                <h4 class="pluginPlayerNumber">Joueur 1</h4>
+                <h2 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h2>
+                <h3 class="pluginPlayerNumber">JOUEUR 1</h3>
                 <ul>
                     <li id="pluginHostWon">2 victoires</li>
                     <li id="pluginHostLost">1 défaite </li>
@@ -16,8 +16,8 @@
                 </ul>
             </div>
             <div id="pluginGuestPlayer" class="box-shadow">
-                <h3 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h3>
-                <h4 class="pluginPlayerNumber">Joueur 2</h4>
+                <h2 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h2>
+                <h3 class="pluginPlayerNumber">JOUEUR 2</h3>
                 <ul>
                     <li id="pluginGuestWon">1 victoire</li>
                     <li id="pluginGuestLost">2 défaites </li>
@@ -42,21 +42,10 @@
                 <div class="pluginGameCell C3"></div>
             </div>
         </section>
-        <!-- <section id="pluginGameGrid">
-            <div id="case1"></div>
-            <div id="case2"></div>
-            <div id="case3"></div>
-            <div id="case4"></div>
-            <div id="case5"></div>
-            <div id="case6"></div>
-            <div id="case7"></div>
-            <div id="case8"></div>
-            <div id="case9"></div>
-        </section> -->
         <section id="pluginParameters">
             <form class="box-shadow">
                 <section id="pluginFormFirstPlayer">
-                    <h5>Premier joueur</h5>
+                    <h4>Premier joueur</h4>
                     <ul>
                         <li>
                             <input type="radio" id="pluginRandom" name="pluginFirstPlayer" value="formRandom" checked>
@@ -81,7 +70,7 @@
                     </ul>
                 </section>
                 <section id="pluginFormTimeSelection">
-                    <h5>Limite de temps</h5>
+                    <h4>Limite de temps</h4>
                     <ul>
                         <li>
                             <input type="radio" id="plugin15s" name="pluginTimeRange" value="form15s" checked>
@@ -98,9 +87,7 @@
                     </ul>
                 </section>
             </form>
-            <div>
-                <p class="button">Réinitialiser</p>
-            </div>
+            <div class="button box-shadow">Réinitialiser</div>
             <!-- test -->
         </section>
     </div>
