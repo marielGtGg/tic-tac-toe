@@ -1,8 +1,10 @@
 <div id="ticTacToeLudo101" class="box-shadow">
     <div id="pluginHeader">
+        <div id="pluginTitle">
+            <h1>Tic-Tac-Toe</h1>
+            <p>QUE LE MEILLEUR GAGNE!</p>
+        </div>
         <img src="#" alt="Logo">
-        <h1 id="pluginTitle">Tic-Tac-Toe</h1>
-        <p id="pluginTitleSub">Que le meilleur gagne!</p>
     </div>
     <div id="pluginBody">
         <section id="pluginPlayers">

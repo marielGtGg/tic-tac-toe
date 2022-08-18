@@ -3,7 +3,7 @@
 #ticTacToeLudo101 {
     margin-left: 0;
     margin-right: 0;
-    max-width: 100%;
+    max-width: 1000px;
     box-sizing: border-box;
 }
 
@@ -25,7 +25,24 @@
     padding: 0;
 }
 
-/*-----Responsive-----*/
+/*-----Entête-----*/
+
+#ticTacToeLudo101 #pluginHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .25rem solid #bebebe;
+}
+
+#ticTacToeLudo101 #pluginHeader h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#ticTacToeLudo101 #pluginHeader p {
+    font-size: 0.9rem;
+}
+
+/*-----Responsive Body-----*/
 
 @media screen and (min-width: 768px) {
     #ticTacToeLudo101 #pluginBody {
@@ -139,6 +156,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    padding: .5rem;
     display: grid;
     grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
     grid-template-rows: 6fr 1fr 6fr 1fr 6fr;
