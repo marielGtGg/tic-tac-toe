@@ -57,7 +57,7 @@
                     <h5>Premier joueur</h5>
                     <div>
                       <input type="radio" id="pluginRandom"
-                       name="pluginFirstPlayer" value="formRandom">
+                       name="pluginFirstPlayer" value="formRandom" checked>
                       <label for="pluginRandom">Aléatoire</label>
                       <input type="radio" id="pluginLastWin"
                        name="pluginFirstPlayer" value="formLastWinner">
@@ -74,10 +74,10 @@
                     </div>
                 </section>
                 <section id="pluginFormTimeSelection">
-                    <h5>Premier joueur</h5>
+                    <h5>Limite de temps</h5>
                     <div>
                       <input type="radio" id="plugin15s"
-                       name="pluginTimeRange" value="form15s">
+                       name="pluginTimeRange" value="form15s" checked>
                       <label for="plugin15s">15 sec.</label>
                       <input type="radio" id="plugin30s"
                        name="pluginTimeRange" value="form30s">
@@ -91,6 +91,7 @@
                   <p class="button">Réinitialiser</p>
                 </div>
               </form>
+              <!-- test -->
         </section>
     </div>
 </div>
