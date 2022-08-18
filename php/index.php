@@ -1,4 +1,4 @@
-<div id="ticTacToeLudo101">
+<div id="ticTacToeLudo101" class="box-shadow">
     <div id="pluginHeader">
         <img src="#" alt="Logo">
         <h1 id="pluginTitle">Tic-Tac-Toe</h1>
@@ -6,7 +6,7 @@
     </div>
     <div id="pluginBody">
         <section id="pluginPlayers">
-            <div id="pluginHostPlayer">
+            <div id="pluginHostPlayer" class="box-shadow">
                 <h3 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h3>
                 <h4 class="pluginPlayerNumber">Joueur 1</h4>
                 <ul>
@@ -15,7 +15,7 @@
                     <li id="pluginHostTie">1 nulle</li>
                 </ul>
             </div>
-            <div id="pluginGuestPlayer">
+            <div id="pluginGuestPlayer" class="box-shadow">
                 <h3 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h3>
                 <h4 class="pluginPlayerNumber">Joueur 2</h4>
                 <ul>
@@ -54,46 +54,54 @@
             <div id="case9"></div>
         </section> -->
         <section id="pluginParameters">
-            <form>
+            <form class="box-shadow">
                 <section id="pluginFormFirstPlayer">
                     <h5>Premier joueur</h5>
-                    <div>
-                      <input type="radio" id="pluginRandom"
-                       name="pluginFirstPlayer" value="formRandom" checked>
-                      <label for="pluginRandom">Aléatoire</label>
-                      <input type="radio" id="pluginLastWin"
-                       name="pluginFirstPlayer" value="formLastWinner">
-                      <label for="pluginLastWin">Dernier vainqueur</label>
-                      <input type="radio" id="pluginLastLost"
-                       name="pluginFirstPlayer" value="formLastLoser">
-                      <label for="pluginLastLost">Dernier perdant</label>
-                      <input type="radio" id="pluginFirstHost"
-                       name="pluginFirstPlayer" value="formPlayerHost">
-                      <label for="pluginFirstHost">Joueur 1</label>
-                      <input type="radio" id="pluginFirstGuest"
-                       name="pluginFirstPlayer" value="formPlayerGuest">
-                      <label for="pluginFirstGuest">Joueur 2</label>
-                    </div>
+                    <ul>
+                        <li>
+                            <input type="radio" id="pluginRandom" name="pluginFirstPlayer" value="formRandom" checked>
+                            <label for="pluginRandom">Aléatoire</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pluginLastWin" name="pluginFirstPlayer" value="formLastWinner">
+                            <label for="pluginLastWin">Dernier vainqueur</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pluginLastLost" name="pluginFirstPlayer" value="formLastLoser">
+                            <label for="pluginLastLost">Dernier perdant</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pluginFirstHost" name="pluginFirstPlayer" value="formPlayerHost">
+                            <label for="pluginFirstHost">Joueur 1</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pluginFirstGuest" name="pluginFirstPlayer" value="formPlayerGuest">
+                            <label for="pluginFirstGuest">Joueur 2</label>
+                        </li>
+                    </ul>
                 </section>
                 <section id="pluginFormTimeSelection">
                     <h5>Limite de temps</h5>
-                    <div>
-                      <input type="radio" id="plugin15s"
-                       name="pluginTimeRange" value="form15s" checked>
-                      <label for="plugin15s">15 sec.</label>
-                      <input type="radio" id="plugin30s"
-                       name="pluginTimeRange" value="form30s">
-                      <label for="plugin30s">30 sec.</label>
-                      <input type="radio" id="pluginTimeless"
-                      name="pluginTimeRange" value="formTimeless">
-                     <label for="pluginTimeless">Illimité</label>
-                    </div>
+                    <ul>
+                        <li>
+                            <input type="radio" id="plugin15s" name="pluginTimeRange" value="form15s" checked>
+                            <label for="plugin15s">15 sec.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="plugin30s" name="pluginTimeRange" value="form30s">
+                            <label for="plugin30s">30 sec.</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pluginTimeless" name="pluginTimeRange" value="formTimeless">
+                            <label for="pluginTimeless">Illimité</label>
+                        </li>
+                    </ul>
                 </section>
-                <div>
-                  <p class="button">Réinitialiser</p>
-                </div>
-              </form>
-              <!-- test -->
+            </form>
+            <div>
+                <p class="button">Réinitialiser</p>
+            </div>
+            <!-- test -->
         </section>
     </div>
 </div>

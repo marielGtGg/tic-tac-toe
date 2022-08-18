@@ -3,16 +3,24 @@
 #ticTacToeLudo101 {
     margin: 0;
     box-sizing: border-box;
-    border: 1px solid #bebebe;
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0 .2rem .2rem #00000050;
 }
 
 #ticTacToeLudo101 div, #ticTacToeLudo101 h1, #ticTacToeLudo101 h2, #ticTacToeLudo101 h3, #ticTacToeLudo101 h4, #ticTacToeLudo101 h5, #ticTacToeLudo101 p, #ticTacToeLudo101 ul {
     font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     margin: 0;
+}
+
+#ticTacToeLudo101.box-shadow, #ticTacToeLudo101 .box-shadow {
+    border: 1px solid #bebebe;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 .2rem .2rem #00000050;
+}
+
+#ticTacToeLudo101 ul {
+    list-style: none;
+    padding: 0;
 }
 
 /*-----Joueurs-----*/
@@ -24,15 +32,26 @@
 }
 
 #ticTacToeLudo101 #pluginPlayers > div {
-    border: 1px solid #bebebe;
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0 .2rem .2rem #00000050;
     flex-grow: 1;
 }
 
 #ticTacToeLudo101 #pluginPlayers > div:first-of-type {
     margin-right: 1rem;
+}
+
+/*-----Paramètres-----*/
+
+#ticTacToeLudo101 #pluginParameters form {
+    margin: 2rem 0;
+    display: flex;
+}
+
+#ticTacToeLudo101 #pluginParameters form > section:first-of-type {
+    margin-right: 1rem;
+}
+
+#ticTacToeLudo101 #pluginParameters form > section {
+    flex-grow: 1;
 }
 
 /*-----Grille-----*/
@@ -41,7 +60,7 @@
     position: relative;
     padding-top: 90%;
     width: 90%;
-    margin: 5% auto;
+    margin: 3rem auto;
 }
 
 #ticTacToeLudo101 #pluginGameGrid {
