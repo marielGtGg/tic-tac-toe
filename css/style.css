@@ -109,8 +109,26 @@
     font-size: .9rem;
 } 
 
+#ticTacToeLudo101 #pluginHostPlayer {
+    background-color: #FFFFFF75;
+    background-image: url(../images/x1.svg);
+    background-blend-mode: lighten;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: bottom .5rem right .5rem;   
+}
+
+#ticTacToeLudo101 #pluginGuestPlayer {
+    background-color: #FFFFFF75;
+    background-image: url(../images/o1.svg);
+    background-blend-mode: lighten;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: bottom .5rem right .5rem;   
+}
+
 #ticTacToeLudo101 #pluginPlayers .activePlayer {
-    background-color: #e2e2e2;
+    background-color: #00000020;
 }
 
 /*-----Paramètres-----*/
