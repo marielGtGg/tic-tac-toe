@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Fira+Sans:wght@200;400;600&family=Fugaz+One&family=Lobster&display=swap');
 
 #ticTacToeLudo101 {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
