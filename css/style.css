@@ -5,16 +5,19 @@
     margin-right: 0;
     max-width: 1000px;
     box-sizing: border-box;
+    background: url(../images/perspective.svg), radial-gradient(circle, rgba(221,56,183,1) 0%, rgba(78,29,80,1) 44%, rgba(17,18,36,1) 100%), rgb(221,56,183);
+    background-size: cover;
 }
 
 #ticTacToeLudo101 div, #ticTacToeLudo101 h1, #ticTacToeLudo101 h2, #ticTacToeLudo101 h3, #ticTacToeLudo101 h4, #ticTacToeLudo101 p, #ticTacToeLudo101 ul {
     font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
+    color: #f5b106;
     margin: 0;
 }
 
 #ticTacToeLudo101.box-shadow, #ticTacToeLudo101 .box-shadow {
-    border: 1px solid #bebebe;
+    border: 1px solid #01a7be;
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 .2rem .2rem #00000050;
@@ -30,7 +33,7 @@
 #ticTacToeLudo101 #pluginHeader {
     display: flex;
     justify-content: space-between;
-    border-bottom: .25rem solid #bebebe;
+    border-bottom: .25rem solid #01a7be;
 }
 
 #ticTacToeLudo101 #pluginHeader h1 {
@@ -110,25 +113,21 @@
 } 
 
 #ticTacToeLudo101 #pluginHostPlayer {
-    background-color: #FFFFFF75;
     background-image: url(../images/x1.svg);
-    background-blend-mode: lighten;
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;   
 }
 
 #ticTacToeLudo101 #pluginGuestPlayer {
-    background-color: #FFFFFF75;
     background-image: url(../images/o1.svg);
-    background-blend-mode: lighten;
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;   
 }
 
 #ticTacToeLudo101 #pluginPlayers .activePlayer {
-    background-color: #00000020;
+    background-color: #01a7be50;
 }
 
 /*-----Paramètres-----*/

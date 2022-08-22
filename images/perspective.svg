@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="700"
+   height="700"
+   viewBox="0 0 185.20833 185.20833"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="perspective.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     borderlayer="true"
+     inkscape:zoom="1.0306667"
+     inkscape:cx="348.31823"
+     inkscape:cy="452.61965"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="modele"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path4075"
+       style="fill:#00ffff;stroke:#00ffff;stroke-width:1.62186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -253.44234,3.6806682 V 401.87859 M -279.90404,3.6806682 V 401.87859 M -306.36573,3.6806682 V 401.87859 M -332.82743,3.6806682 V 401.87859 M -359.28914,3.6806682 V 401.87859 M -385.75083,3.6806682 V 401.87859 M -412.5618,3.6806682 V 401.87859 M -438.98469,3.6806682 V 401.87859 M -465.40759,3.6806682 V 401.87859 M -491.83046,3.6806682 V 401.87859 M -518.25335,3.6806682 V 401.87859 M -544.67625,3.6806682 V 401.87859 M -571.09914,3.6806682 V 401.87859 M -597.52203,3.6806682 V 401.87859 M -623.94491,3.6806682 V 401.87859 M -650.3678,3.6806682 V 401.87859 m -0.81093,-0.4591 h 398.19792 m -398.19792,-26.46185 h 398.19792 m -398.19792,-26.46186 h 398.19792 m -398.19792,-26.46187 h 398.19792 M -651.17873,269.1102 h 398.19792 m -398.19792,26.46185 h 398.19792 m -398.19792,-53.27559 h 398.19792 M -651.17873,215.8737 h 398.19792 m -398.19792,-26.42277 h 398.19792 m -398.19792,-26.42275 h 398.19792 m -398.19792,-26.42276 h 398.19792 m -398.19792,-26.42279 h 398.19792 M -651.17873,83.75988 h 398.19792 M -651.17873,57.337117 h 398.19792 M -651.17873,30.914354 h 398.19792 M -651.17873,4.4915911 h 398.19792" />
+    <path
+       style="fill:none;stroke:none;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,398.19794 99.218749,198.4375 H 298.97919 l 99.21872,199.76044 z"
+       id="path4371" />
+    <path
+       id="path4613"
+       style="fill:#00ffff;stroke:#00ffff;stroke-width:0.408112;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 192.25328,68.812804 98.988,118.817696 m -112.263,-118.817696 85.802,118.817696 m -99.077,-118.817696 72.615,118.817696 m -85.89,-118.817696 59.428,118.817696 m -72.703,-118.817696 46.242,118.817696 m -59.516,-118.817696 33.054,118.817696 m -46.504,-118.817696 19.693,118.817696 M 99.173283,68.812804 105.69928,187.6305 M 85.918281,68.812804 79.276281,187.6305 m -6.613,-118.817696 -19.81,118.817696 m 6.554,-118.817696 -32.977,118.817696 M 46.152281,68.812804 0.00728087,187.6305 M 32.897281,68.812208 -26.415119,187.6305 M 19.641281,68.812208 -52.838019,187.6305 M 6.3862812,68.812804 -79.260919,187.6305 M -6.8691191,68.812804 -105.68379,187.6305 m -0.58316,-0.27301 H 291.47528 M -93.964919,172.62541 H 279.17328 M -83.096119,159.60993 H 268.30428 M -73.424019,148.02734 H 258.63228 M -56.957619,128.30786 H 242.16628 m -306.927499,9.34552 H 249.96928 M -49.801919,119.73853 H 235.01028 M -43.390119,112.06022 H 228.59828 M -37.530919,105.04393 H 222.73928 M -32.155719,98.606985 H 217.36428 m -244.571299,-5.9266 H 212.41528 M -22.635819,87.206449 H 207.84428 M -18.400619,82.134595 H 203.60928 M -14.465719,77.422575 H 199.67428 M -10.800219,73.032929 H 196.00828 M -7.3774191,68.934144 H 192.58628" />
+  </g>
+</svg>
