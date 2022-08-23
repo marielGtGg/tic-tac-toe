@@ -9,7 +9,7 @@
 
     /*-----Background Colors-----*/
     --background: #FFFFFF75;
-    --backgroundGradient: circle, rgba(221,56,183,1) 0%, rgba(78,29,80,1) 44%, rgba(17,18,36,1) 100%;
+    --backgroundGradient: circle, rgba(221,56,183,1) 0%, rgba(78,29,80,1) 75%, rgba(17,18,36,1) 100%;
   }
 
 
@@ -276,28 +276,12 @@
     grid-area: C3;
 }
 
-#ticTacToeLudo101 .o1 {
-    background-image: url(../images/o1.svg);
+#ticTacToeLudo101 .o {
+    background-image: url(../images/o.svg);
 }
 
-#ticTacToeLudo101 .o2 {
-    background-image: url(../images/o2.svg);
-}
-
-#ticTacToeLudo101 .o3 {
-    background-image: url(../images/o3.svg);
-}
-
-#ticTacToeLudo101 .x1 {
-    background-image: url(../images/x1.svg);
-}
-
-#ticTacToeLudo101 .x2 {
-    background-image: url(../images/x2.svg);
-}
-
-#ticTacToeLudo101 .x3 {
-    background-image: url(../images/x3.svg);
+#ticTacToeLudo101 .x{
+    background-image: url(../images/x.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.d1::after {

@@ -35,11 +35,11 @@
                 <div class="pluginGameMatrix V2"></div>
                 <div class="pluginGameCell A1 empty"></div>
                 <div class="pluginGameCell A2 empty"></div>
-                <div class="pluginGameCell A3 x1"></div>
-                <div class="pluginGameCell B1 o1"></div>
-                <div class="pluginGameCell B2 o2"></div>
-                <div class="pluginGameCell B3 x3"></div>
-                <div class="pluginGameCell C1 x2"></div>
+                <div class="pluginGameCell A3 x"></div>
+                <div class="pluginGameCell B1 o"></div>
+                <div class="pluginGameCell B2 o"></div>
+                <div class="pluginGameCell B3 x"></div>
+                <div class="pluginGameCell C1 x"></div>
                 <div class="pluginGameCell C2 empty"></div>
                 <div class="pluginGameCell C3 empty"></div>
             </div>
