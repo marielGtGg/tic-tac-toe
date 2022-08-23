@@ -29,10 +29,11 @@
         </section>
        <section id="pluginGameContainer">
             <div id="pluginGameGrid" class="guest">
+            <!--
                 <div class="pluginGameMatrix H1"></div>
                 <div class="pluginGameMatrix H2"></div>
                 <div class="pluginGameMatrix V1"></div>
-                <div class="pluginGameMatrix V2"></div>
+                <div class="pluginGameMatrix V2"></div>-->
                 <div class="pluginGameCell A1 empty"></div>
                 <div class="pluginGameCell A2 empty"></div>
                 <div class="pluginGameCell A3 x"></div>
