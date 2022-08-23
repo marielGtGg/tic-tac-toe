@@ -22,6 +22,7 @@
     box-sizing: border-box;
     background: url(../images/perspective.svg), radial-gradient(var(--backgroundGradient));
     background-size: cover;
+    background-position: center top;
     border-radius: .7rem;
     padding: 1.5rem;
     box-shadow: 0 .5rem .5rem var(--boxshadow);
