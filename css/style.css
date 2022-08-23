@@ -4,12 +4,14 @@
     /*-----Elements colors-----*/
     --primary: #f5b106;
     --secondary: #01a7be;
-    --boxshadow: #00000050;
-    --highlight: #01a7be50;
+    --third: #dd38b7;
+    --boxshadow: #00000080;
+    --boxBackground: #4e1d50b0;
+    --highlight: #01a7be60;
 
     /*-----Background Colors-----*/
     --background: #FFFFFF75;
-    --backgroundGradient: circle, rgba(221,56,183,1) 0%, rgba(78,29,80,1) 75%, rgba(17,18,36,1) 100%;
+    --backgroundGradient: circle, var(--third) 0%, rgba(78,29,80,1) 75%, rgba(17,18,36,1) 100%;
   }
 
 
@@ -20,6 +22,9 @@
     box-sizing: border-box;
     background: url(../images/perspective.svg), radial-gradient(var(--backgroundGradient));
     background-size: cover;
+    border-radius: .7rem;
+    padding: 1.5rem;
+    box-shadow: 0 .5rem .5rem var(--boxshadow);
 }
 
 #ticTacToeLudo101 div, #ticTacToeLudo101 h1, #ticTacToeLudo101 h2, #ticTacToeLudo101 h3, #ticTacToeLudo101 h4, #ticTacToeLudo101 p, #ticTacToeLudo101 ul {
@@ -29,11 +34,12 @@
     margin: 0;
 }
 
-#ticTacToeLudo101.box-shadow, #ticTacToeLudo101 .box-shadow {
-    border: 1px solid var(--secondary);
-    border-radius: 1rem;
+#ticTacToeLudo101 .box-shadow {
+    border: 1px solid var(--third);
+    border-radius: .3rem;
     padding: 1.5rem;
     box-shadow: 0 .2rem .2rem var(--boxshadow);
+    background: var(--boxBackground);
 }
 
 #ticTacToeLudo101 ul {
@@ -141,6 +147,9 @@
 
 #ticTacToeLudo101 #pluginPlayers .activePlayer {
     background-color: var(--highlight);
+    border-bottom-width: 5px;
+    border-color: var(--secondary);
+    box-shadow: 0 7px 7px var(--boxshadow);
 }
 
 /*-----Paramètres-----*/

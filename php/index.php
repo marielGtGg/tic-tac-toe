@@ -1,4 +1,4 @@
-<div id="ticTacToeLudo101" class="box-shadow">
+<div id="ticTacToeLudo101">
     <div id="pluginHeader">
         <div id="pluginTitle">
             <h1>Tic-Tac-Toe</h1>
@@ -29,11 +29,6 @@
         </section>
        <section id="pluginGameContainer">
             <div id="pluginGameGrid" class="guest">
-            <!--
-                <div class="pluginGameMatrix H1"></div>
-                <div class="pluginGameMatrix H2"></div>
-                <div class="pluginGameMatrix V1"></div>
-                <div class="pluginGameMatrix V2"></div>-->
                 <div class="pluginGameCell A1 empty"></div>
                 <div class="pluginGameCell A2 empty"></div>
                 <div class="pluginGameCell A3 x"></div>
