@@ -71,6 +71,10 @@
     font-size: 0.9rem;
 }
 
+#ticTacToeLudo101 #pluginHeader #logo {
+    height: 75px;
+}
+
 /*-----Responsive Body-----*/
 
 @media screen and (min-width: 768px) {

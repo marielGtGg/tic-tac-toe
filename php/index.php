@@ -4,7 +4,7 @@
             <h1>Tic-Tac-Toe</h1>
             <p>QUE LE MEILLEUR GAGNE!</p>
         </div>
-        <img src="#" alt="Logo">
+        <img id="logo" src="../wp-content/plugins/tic-tac-toe/images/ludo101.svg" alt="Logo">
     </div>
     <div id="pluginBody">
         <section id="pluginPlayers">
