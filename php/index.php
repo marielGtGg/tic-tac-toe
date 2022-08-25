@@ -1,7 +1,7 @@
 <div id="ticTacToeLudo101">
     <div id="pluginHeader">
         <div id="pluginTitle">
-            <h1>Tic-Tac-Toe</h1>
+            <img id="title" src="../wp-content/plugins/tic-tac-toe/images/tictactoe.svg" alt="Tic-Tac-Toe">
             <p>QUE LE MEILLEUR GAGNE!</p>
         </div>
         <img id="logo" src="../wp-content/plugins/tic-tac-toe/images/ludo101.svg" alt="Logo">

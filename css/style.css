@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Fira+Sans:wght@200;400;600&family=Fugaz+One&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;600&display=swap');
 
 :root {
     /*-----Elements colors-----*/
@@ -54,25 +54,32 @@
     padding: 0;
 }
 
+#ticTacToeLudo101 img {
+    display: block;
+}
+
 /*-----Entête-----*/
 
 #ticTacToeLudo101 #pluginHeader {
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     border-bottom: .25rem solid var(--secondary);
 }
 
-#ticTacToeLudo101 #pluginHeader h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
 #ticTacToeLudo101 #pluginHeader p {
     font-size: 0.9rem;
+    padding: .2rem 0 0 .5rem;
+}
+
+#ticTacToeLudo101 #pluginHeader #title {
+    max-width: 100%;
+    height: 40px;
 }
 
 #ticTacToeLudo101 #pluginHeader #logo {
-    height: 75px;
+    height: 70px;
+    padding: .2rem;
 }
 
 /*-----Responsive Body-----*/
@@ -216,7 +223,8 @@ input[type="radio"] {
     padding: 1.2px;
     background-clip: content-box;
     border: 1px solid var(--third);
-    background-color: #fbebfb;
+    /*background-color: #fbebfb;*/
+    background-color: transparent;
     border-radius: 50%;
 }
 
