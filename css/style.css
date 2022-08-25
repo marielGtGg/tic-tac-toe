@@ -150,14 +150,14 @@
 }
 
 #ticTacToeLudo101 #pluginHostPlayer {
-    background-image: url(../images/x1.svg);
+    background-image: url(../images/x-shaded.svg);
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
 }
 
 #ticTacToeLudo101 #pluginGuestPlayer {
-    background-image: url(../images/o1.svg);
+    background-image: url(../images/o-shaded.svg);
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
@@ -414,11 +414,11 @@ input[type="radio"]:checked {
 }
 
 #ticTacToeLudo101 #pluginGameGrid.host .pluginGameCell:hover {
-    background-image: url(../images/x.svg);
+    background-image: url(../images/x-shaded.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.guest .pluginGameCell.empty:hover {
-    background-image: url(../images/o.svg);
+    background-image: url(../images/o-shaded.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
