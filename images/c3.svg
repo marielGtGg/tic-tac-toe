@@ -8,7 +8,7 @@
    version="1.1"
    id="svg827"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="d1.svg"
+   sodipodi:docname="c3.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -213,7 +213,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="c3"
-     style="display:none">
+     style="display:inline">
     <g
        id="g2558"
        transform="matrix(0,-0.99999999,-0.99999999,0,71.437503,52.916667)">
@@ -343,7 +343,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="d1">
+     inkscape:label="d1"
+     style="display:none">
     <g
        id="g9535"
        transform="rotate(45,25.631506,28.314177)">

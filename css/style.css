@@ -151,14 +151,14 @@
 
 #ticTacToeLudo101 #pluginHostPlayer {
     background-image: url(../images/x-shaded.svg);
-    background-size: 30%;
+    background-size: 2.5rem;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
 }
 
 #ticTacToeLudo101 #pluginGuestPlayer {
     background-image: url(../images/o-shaded.svg);
-    background-size: 30%;
+    background-size: 2.5rem;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
 }
@@ -355,62 +355,48 @@ input[type="radio"]:checked {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
 }
 
 #ticTacToeLudo101 #pluginGameGrid.d1::after {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
     background-image: url(../images/d1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.d2::after {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 1 / -1;
     background-image: url(../images/d2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.r1::after {
     content: '';
-    grid-row: 1;
-    grid-column: 1 / -1;
-    background-image: url(../images/r0.svg);
+    background-image: url(../images/r1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.r2::after {
     content: '';
-    grid-row: 2;
-    grid-column: 1 / -1;
-    background-image: url(../images/r0.svg);
+    background-image: url(../images/r2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.r3::after {
     content: '';
-    grid-row: 3;
-    grid-column: 1 / -1;
-    background-image: url(../images/r0.svg);
+    background-image: url(../images/r3.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.c1::after {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 1;
-    background-image: url(../images/c0.svg);
+    background-image: url(../images/c1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.c2::after {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 2;
-    background-image: url(../images/c0.svg);
+    background-image: url(../images/c2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.c3::after {
     content: '';
-    grid-row: 1 / -1;
-    grid-column: 3;
-    background-image: url(../images/c0.svg);
+    background-image: url(../images/c3.svg);
 }
 
 #ticTacToeLudo101 #pluginGameGrid.host .pluginGameCell:hover {
