@@ -28,12 +28,12 @@
             </div>
         </section>
        <section id="pluginGameContainer">
-            <div id="pluginGameGrid" class="guest d2">
+            <div id="pluginGameGrid" class="guest">
                 <div class="pluginGameCell A1 empty"></div>
                 <div class="pluginGameCell A2 empty"></div>
                 <div class="pluginGameCell A3 x"></div>
                 <div class="pluginGameCell B1 o"></div>
-                <div class="pluginGameCell B2 x"></div>
+                <div class="pluginGameCell B2 o"></div>
                 <div class="pluginGameCell B3 x"></div>
                 <div class="pluginGameCell C1 x"></div>
                 <div class="pluginGameCell C2 empty"></div>
