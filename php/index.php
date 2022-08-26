@@ -27,6 +27,9 @@
                 </ul>
             </div>
         </section>
+        <section id="pluginTime" class="box-shadow">
+            <p id="pluginTimeShow">00:00</p>
+        </section>
        <section id="pluginGameContainer">
             <div id="pluginGameGrid" class="guest">
                 <div class="pluginGameCell A1 empty"></div>
@@ -39,9 +42,6 @@
                 <div class="pluginGameCell C2 empty"></div>
                 <div class="pluginGameCell C3 empty"></div>
             </div>
-        </section>
-        <section id="pluginTime" class="box-shadow">
-            <p id="pluginTimeShow">00:00</p>
         </section>
         <section id="pluginParameters">
             <form class="box-shadow">

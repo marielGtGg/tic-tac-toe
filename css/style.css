@@ -89,33 +89,33 @@
         margin-top: 2rem;
         display: grid;
         grid-template-columns: minmax(auto, 60%) minmax(min-content, auto);
-        grid-template-rows: auto auto;
         grid-template-areas:
             "game players"
             "game time"
             "game parameters";
-        gap: 2rem;
+        row-gap: 1rem;
+        column-gap: 2rem;
     }
 
     #ticTacToeLudo101 #pluginPlayers {
         grid-area: players;
-        align-self: flex-start;
+        align-self: start;
     }
 
-    #ticTactToeLudo101 #pluginTime{
+    #ticTacToeLudo101 #pluginTime{
         grid-area: time;
-        align-self: flex-start;
+        align-self: start;
 
     }
 
     #ticTacToeLudo101 #pluginGameContainer {
         grid-area: game;
-        align-self: flex-start;
+        align-self: start;
     }
 
     #ticTacToeLudo101 #pluginParameters {
         grid-area: parameters;
-        align-self: flex-end;
+        align-self: end;
     }
 
     #ticTacToeLudo101 #pluginBody>section {
@@ -132,14 +132,11 @@
 #ticTacToeLudo101 #pluginPlayers {
     margin: 2rem 0;
     display: flex;
+    gap: 1rem;
 }
 
 #ticTacToeLudo101 #pluginPlayers>div {
     flex-grow: 1;
-}
-
-#ticTacToeLudo101 #pluginPlayers>div:first-of-type {
-    margin-right: 1rem;
 }
 
 #ticTacToeLudo101 #pluginPlayers h2 {
@@ -177,16 +174,23 @@
     box-shadow: 0 7px 7px var(--boxshadow);
 }
 
-/*-----Temps-----*/
-
-#pluginTimeShow{
-    padding: 1rem;
-    font-size: 3rem;
-    text-align: center;
-    line-height: 0;
-    letter-spacing: .5rem;
+#ticTacToeLudo101 #pluginHostPlayer.activePlayer {
+    background-image: url(../images/x.svg);
 }
 
+#ticTacToeLudo101 #pluginGuestPlayer.activePlayer {
+    background-image: url(../images/o.svg);
+}
+
+/*-----Temps-----*/
+
+#ticTacToeLudo101 #pluginTime {
+    padding: .5rem;
+    font-size: 3rem;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: .5rem;
+}
 
 /*-----Paramètres-----*/
 
