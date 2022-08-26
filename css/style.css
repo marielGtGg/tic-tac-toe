@@ -170,6 +170,14 @@
     box-shadow: 0 7px 7px var(--boxshadow);
 }
 
+#ticTacToeLudo101 #pluginHostPlayer.activePlayer {
+    background-image: url(../images/o.svg);
+}
+
+#ticTacToeLudo101 #pluginGuestPlayer.activePlayer {
+    background-image: url(../images/o.svg);
+}
+
 /*-----Paramètres-----*/
 
 #ticTacToeLudo101 #pluginParameters form {
