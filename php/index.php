@@ -9,8 +9,8 @@
     <div id="pluginBody">
         <section id="pluginPlayers">
             <div id="pluginHostPlayer" class="box-shadow">
-                <h2 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name;?></h2>
-                <h3 class="pluginPlayerNumber">JOUEUR 1</h3>
+                <h2 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h2>
+                <h3 class="pluginPlayerNumber">JOUEUR 1</h3>               
                 <ul>
                     <li id="pluginHostWon">2 victoires</li>
                     <li id="pluginHostLost">1 défaite </li>
@@ -19,7 +19,7 @@
             </div>
             <div id="pluginGuestPlayer" class="box-shadow activePlayer">
                 <h2 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h2>
-                <h3 class="pluginPlayerNumber">JOUEUR 2</h3>
+                <h3 class="pluginPlayerNumber">JOUEUR 2</h3>        
                 <ul>
                     <li id="pluginGuestWon">1 victoire</li>
                     <li id="pluginGuestLost">2 défaites </li>
