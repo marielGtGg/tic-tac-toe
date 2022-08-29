@@ -91,5 +91,14 @@
             <div class="button box-shadow">Réinitialiser</div>
             <!-- test -->
         </section>
+
+        <!-- Fenetre modale -->
+        <!--<div id="pluginModalWrapper">
+            <div id="pluginModalWindow">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                <div id="buttonYes">Oui</div>
+                <div id="buttonNo">Non</div>
+            </div>
+        </div>-->
     </div>
 </div>
