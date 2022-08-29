@@ -12,18 +12,18 @@
                 <h2 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h2>
                 <h3 class="pluginPlayerNumber">JOUEUR 1</h3>               
                 <ul>
-                    <li id="pluginHostWon">2 victoires</li>
-                    <li id="pluginHostLost">1 défaite </li>
-                    <li id="pluginHostTie">1 nulle</li>
+                    <li id="pluginHostWon"><span>2</span> victoires</li>
+                    <li id="pluginHostLost"><span>1</span> défaite </li>
+                    <li id="pluginHostTie"><span>1</span> nulle</li>
                 </ul>
             </div>
             <div id="pluginGuestPlayer" class="box-shadow activePlayer">
                 <h2 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h2>
                 <h3 class="pluginPlayerNumber">JOUEUR 2</h3>        
                 <ul>
-                    <li id="pluginGuestWon">1 victoire</li>
-                    <li id="pluginGuestLost">2 défaites </li>
-                    <li id="pluginGuestTie">1 nulle</li>
+                    <li id="pluginGuestWon"><span>1</span> victoire</li>
+                    <li id="pluginGuestLost"><span>2</span> défaites </li>
+                    <li id="pluginGuestTie"><span>1</span> nulle</li>
                 </ul>
             </div>
         </section>
@@ -88,7 +88,7 @@
                     </ul>
                 </section>
             </form>
-            <div class="button box-shadow">Réinitialiser</div>
+            <div id="pluginResetGrid" class="button box-shadow">Réinitialiser</div>
             <!-- test -->
         </section>
 

@@ -9,9 +9,9 @@ $(function() {
 class gameTicTacToe {
     constructor() {
         this.name = "";
+        this.board = document.getElementsByClassName("pluginGameCell");
         this.scoreHost = [0, 0, 0]; /* Win/Lost/Tie */
         this.scoreGuest = [0, 0, 0]; /* Win/Lost/Tie */
-        this.board = document.getElementsByClassName("pluginGameCell");
         this.players = ["X", "O"];
         this.winCondition = [
             [0, 1, 2],
@@ -25,17 +25,19 @@ class gameTicTacToe {
         ]
     }
 
+    /*Fonction à lier au bouton reset*/
     resetBoard() {
-        for(let i=0; i< this.board; i++){
-            this.board[i].classList.remove("x");
-            this.board[i].classList.remove("o");
-            this.board[i].classList.remove("empty");
-            this.board[i].classList.add("empty");
-        }       
-        ;
+        console.log("resetBoard!!");
+        for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
+            console.log(i);
+            document.getElementsByClassName("pluginGameCell")[i].classList.remove("o");
+            document.getElementsByClassName("pluginGameCell")[i].classList.remove("x");
+            document.getElementsByClassName("pluginGameCell")[i].classList.remove("empty");
+            document.getElementsByClassName("pluginGameCell")[i].classList.add("empty");
+        };      
     }
 
-    displayScore() {
+    updateScore() {
         console.log(`Host ${this.scoreHost[0]} win`);
         console.log(`Host ${this.scoreHost[1]} lost`);
         console.log(`Host ${this.scoreHost[2]} tie`);
@@ -64,4 +66,15 @@ class gameTicTacToe {
         return true;
     }*/
 }
+
 var board = new gameTicTacToe;
+window.onload = function(){
+    document.getElementById("pluginResetGrid").addEventListener("click",function(){
+        board.resetBoard();
+    })
+}
+    
+
+
+
+
