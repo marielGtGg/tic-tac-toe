@@ -25,6 +25,8 @@ class gameTicTacToe {
         ]
     }
 
+    //Allo ceci est un test
+
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
         for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
