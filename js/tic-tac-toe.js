@@ -9,7 +9,8 @@ $(function() {
 class gameTicTacToe {
     constructor() {
         this.name = "";
-        this.board = document.getElementsByClassName("pluginGameCell");
+        this.board = document.querySelector("pluginGameGrid")
+        this.cells = document.getElementsByClassName("pluginGameCell");
         this.scoreHost = [0, 0, 0]; /* Win/Lost/Tie */
         this.scoreGuest = [0, 0, 0]; /* Win/Lost/Tie */
         this.players = ["x", "o"];
@@ -25,15 +26,13 @@ class gameTicTacToe {
         ]
     }
 
-    //Allo ceci est un test
-
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
-        for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
-            document.getElementsByClassName("pluginGameCell")[i].classList.remove("o");
-            document.getElementsByClassName("pluginGameCell")[i].classList.remove("x");
-            document.getElementsByClassName("pluginGameCell")[i].classList.remove("empty");
-            document.getElementsByClassName("pluginGameCell")[i].classList.add("empty");
+        for (var i=0; i< this.cells.length; i++){
+            this.cells[i].classList.remove("o");
+            this.cells[i].classList.remove("x");
+            this.cells[i].classList.remove("empty");
+            this.cells[i].classList.add("empty");
         };      
     }
 /*
