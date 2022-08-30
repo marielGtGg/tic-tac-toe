@@ -12,7 +12,7 @@ class gameTicTacToe {
         this.board = document.getElementsByClassName("pluginGameCell");
         this.scoreHost = [0, 0, 0]; /* Win/Lost/Tie */
         this.scoreGuest = [0, 0, 0]; /* Win/Lost/Tie */
-        this.players = ["X", "O"];
+        this.players = ["x", "o"];
         this.winCondition = [
             [0, 1, 2],
             [3, 4, 5],
@@ -26,17 +26,15 @@ class gameTicTacToe {
     }
 
     /*Fonction à lier au bouton reset*/
-    resetBoard() {
-        console.log("resetBoard!!");
+    resetBoard() {;
         for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
-            console.log(i);
             document.getElementsByClassName("pluginGameCell")[i].classList.remove("o");
             document.getElementsByClassName("pluginGameCell")[i].classList.remove("x");
             document.getElementsByClassName("pluginGameCell")[i].classList.remove("empty");
             document.getElementsByClassName("pluginGameCell")[i].classList.add("empty");
         };      
     }
-
+/*
     updateScore() {
         console.log(`Host ${this.scoreHost[0]} win`);
         console.log(`Host ${this.scoreHost[1]} lost`);
@@ -44,6 +42,19 @@ class gameTicTacToe {
         console.log(`Guest ${this.scoreHost[1]} win`);
         console.log(`Guest ${this.scoreHost[2]} lost`);
         console.log(`Guest ${this.scoreHost[0]} tie`);
+    }
+*/
+
+    /*Fonction à placer les event sur tout les cases de la grid*/
+    setEventToGrid(){
+        let grid = document.getElementsByClassName("pluginGameCell");
+        for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
+            console.log(i);
+            document.getElementsByClassName("pluginGameCell")[i].addEventListener('click',function(){
+                    /*element.classList.add(this.players[0]);
+                    this.players.reverse();*/
+                    console.log("click");
+            });
     }
 
 
@@ -66,12 +77,16 @@ class gameTicTacToe {
         return true;
     }*/
 }
+}
 
-var board = new gameTicTacToe;
+let board = new gameTicTacToe;
+
 window.onload = function(){
     document.getElementById("pluginResetGrid").addEventListener("click",function(){
         board.resetBoard();
     })
+
+    board.setEventToGrid();
 }
     
 
