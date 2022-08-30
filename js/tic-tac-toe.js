@@ -26,7 +26,7 @@ class gameTicTacToe {
             [0, 4, 8],
             [2, 4, 6]
         ];
-        this.setActivePlayer()
+        this.setActivePlayer() 
     }
 
     /*Fonction à lier au bouton reset*/
@@ -35,8 +35,8 @@ class gameTicTacToe {
             this.cells[i].classList.remove("o", "x", "empty");
             this.cells[i].classList.add("empty");
         }; 
-        this.setEventToGrid(this);     
-        this.setActivePlayer();
+        this.setEventToGrid(this);  //retire et recrée les eventlistner   
+        this.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
     }
 /*
     updateScore() {
@@ -51,19 +51,22 @@ class gameTicTacToe {
 
     /*Fonction à placer les event sur tout les cases de la grid*/
     setEventToGrid(game) {
+        //j'ai mis la fonction dans une constante parce que
+        //si on la passe en fonction anonyme direment dans le evetListener, 
+        //le removeEventListener ne reconnait pas que c'est la même fonction et ne fonctionne pas.
         const onClick = function() {
             playTurn(this, game);
         }
 
         for (var i=0; i < game.cells.length; i++){
-            game.cells[i].replaceWith(game.cells[i].cloneNode()); //retire tous les eventListeners
+            game.cells[i].replaceWith(game.cells[i].cloneNode()); //retire tous les eventListeners (pour le cas d'un reset où il reste des eventListener sur certaines cases)
             game.cells[i].addEventListener('click', onClick);
         }
 
         function playTurn(cell, game) {
             cell.classList.remove("empty");
             cell.classList.add(game.activePlayer);
-            cell.removeEventListener('click', onClick);
+            cell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
             game.switchPlayer(game);
         }
     /*winVerif() {
@@ -114,7 +117,7 @@ class gameTicTacToe {
 
 
 window.onload = function(){
-    let game = new gameTicTacToe;
+    let game = new gameTicTacToe; //Déplacé dans le onLoad car il va chercher des éléments du html donc la page doit être loadée
 
     document.getElementById("pluginResetGrid").addEventListener("click",function(){
         game.resetBoard(game);
