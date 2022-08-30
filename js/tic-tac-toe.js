@@ -9,11 +9,13 @@ $(function() {
 class gameTicTacToe {
     constructor() {
         this.name = "";
-        this.board = document.querySelector("pluginGameGrid")
+        this.board = document.querySelector("#pluginGameBoard");
         this.cells = document.getElementsByClassName("pluginGameCell");
         this.scoreHost = [0, 0, 0]; /* Win/Lost/Tie */
         this.scoreGuest = [0, 0, 0]; /* Win/Lost/Tie */
         this.players = ["x", "o"];
+        this.host = document.querySelector("#pluginHostPlayer");
+        this.guest = document.querySelector("#pluginGuestPlayer");
         this.winCondition = [
             [0, 1, 2],
             [3, 4, 5],
@@ -23,17 +25,18 @@ class gameTicTacToe {
             [2, 5, 8],
             [0, 4, 8],
             [2, 4, 6]
-        ]
+        ];
+        this.setActivePlayer()
     }
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
         for (var i=0; i< this.cells.length; i++){
-            this.cells[i].classList.remove("o");
-            this.cells[i].classList.remove("x");
-            this.cells[i].classList.remove("empty");
+            this.cells[i].classList.remove("o", "x", "empty");
             this.cells[i].classList.add("empty");
-        };      
+        }; 
+        this.setEventToGrid(this);     
+        this.setActivePlayer();
     }
 /*
     updateScore() {
@@ -47,18 +50,22 @@ class gameTicTacToe {
 */
 
     /*Fonction à placer les event sur tout les cases de la grid*/
-    setEventToGrid(){
-        let grid = document.getElementsByClassName("pluginGameCell");
-        for (var i=0; i< document.getElementsByClassName("pluginGameCell").length; i++){
-            console.log(i);
-            document.getElementsByClassName("pluginGameCell")[i].addEventListener('click',function(){
-                    /*element.classList.add(this.players[0]);
-                    this.players.reverse();*/
-                    console.log("click");
-            });
-    }
+    setEventToGrid(game) {
+        const onClick = function() {
+            playTurn(this, game);
+        }
 
+        for (var i=0; i < game.cells.length; i++){
+            game.cells[i].replaceWith(game.cells[i].cloneNode()); //retire tous les eventListeners
+            game.cells[i].addEventListener('click', onClick);
+        }
 
+        function playTurn(cell, game) {
+            cell.classList.remove("empty");
+            cell.classList.add(game.activePlayer);
+            cell.removeEventListener('click', onClick);
+            game.switchPlayer(game);
+        }
     /*winVerif() {
         for (let i = 0; i < this.winCondition.length; i++) {
             if (this.winCondition[i][0] === this.winCondition[i][1] === this.winCondition[i][2]) {
@@ -77,17 +84,44 @@ class gameTicTacToe {
         }
         return true;
     }*/
-}
+    
+    }
+
+    setActivePlayer() {
+        //pour le moment déternime le premier joueur de façon aléatoire
+        this.activePlayer = this.players[Math.floor(Math.random() * 2)];
+        this.switchPlayer(this);
+    }
+    
+    switchPlayer(game) {
+        game.activePlayer = game.activePlayer == game.players[0] ? game.players[1] : game.players[0];
+        
+        //Pour le hover sur les cases de la grille
+        game.board.classList.remove("x", "o"); 
+        game.board.classList.add(this.activePlayer);
+
+        //Pour la section des joueurs
+        game.host.classList.remove("activePlayer");
+        game.guest.classList.remove("activePlayer");
+        if (game.activePlayer == "x") {
+            game.host.classList.add("activePlayer");
+        } else {
+            game.guest.classList.add("activePlayer");
+        }
+    }
 }
 
-let board = new gameTicTacToe;
+
 
 window.onload = function(){
+    let game = new gameTicTacToe;
+
     document.getElementById("pluginResetGrid").addEventListener("click",function(){
-        board.resetBoard();
+        game.resetBoard(game);
     })
 
-    board.setEventToGrid();
+    game.setEventToGrid(game);
+
 }
     
 

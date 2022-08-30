@@ -12,33 +12,33 @@
                 <h2 class="pluginPlayerName" id="pluginHost"><?php echo wp_get_current_user()->display_name; ?></h2>
                 <h3 class="pluginPlayerNumber">JOUEUR 1</h3>               
                 <ul>
-                    <li id="pluginHostWon"><span>2</span> victoires</li>
-                    <li id="pluginHostLost"><span>1</span> défaite </li>
-                    <li id="pluginHostTie"><span>1</span> nulle</li>
+                    <li id="pluginHostWon"><span>0</span> victoire</li>
+                    <li id="pluginHostLost"><span>0</span> défaite</li>
+                    <li id="pluginHostTie"><span>0</span> nulle</li>
                 </ul>
             </div>
-            <div id="pluginGuestPlayer" class="box-shadow activePlayer">
+            <div id="pluginGuestPlayer" class="box-shadow">
                 <h2 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h2>
                 <h3 class="pluginPlayerNumber">JOUEUR 2</h3>        
                 <ul>
-                    <li id="pluginGuestWon"><span>1</span> victoire</li>
-                    <li id="pluginGuestLost"><span>2</span> défaites </li>
-                    <li id="pluginGuestTie"><span>1</span> nulle</li>
+                    <li id="pluginGuestWon"><span>0</span> victoire</li>
+                    <li id="pluginGuestLost"><span>0</span> défaite</li>
+                    <li id="pluginGuestTie"><span>0</span> nulle</li>
                 </ul>
             </div>
         </section>
         <section id="pluginTime" class="box-shadow">
-            <p id="pluginTimeShow">00:00</p>
+            <p id="pluginTimeShow">00:15</p>
         </section>
        <section id="pluginGameContainer">
-            <div id="pluginGameGrid" class="guest">
+            <div id="pluginGameBoard" class="">
                 <div class="pluginGameCell A1 empty"></div>
                 <div class="pluginGameCell A2 empty"></div>
-                <div class="pluginGameCell A3 x"></div>
-                <div class="pluginGameCell B1 o"></div>
-                <div class="pluginGameCell B2 o"></div>
-                <div class="pluginGameCell B3 x"></div>
-                <div class="pluginGameCell C1 x"></div>
+                <div class="pluginGameCell A3 empty"></div>
+                <div class="pluginGameCell B1 empty"></div>
+                <div class="pluginGameCell B2 empty"></div>
+                <div class="pluginGameCell B3 empty"></div>
+                <div class="pluginGameCell C1 empty"></div>
                 <div class="pluginGameCell C2 empty"></div>
                 <div class="pluginGameCell C3 empty"></div>
             </div>

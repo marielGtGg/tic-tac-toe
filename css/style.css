@@ -264,7 +264,7 @@ input[type="radio"]:checked {
     margin: 3rem auto;
 }
 
-#ticTacToeLudo101 #pluginGameGrid {
+#ticTacToeLudo101 #pluginGameBoard {
     position: absolute;
     top: 0;
     right: 0;
@@ -282,7 +282,7 @@ input[type="radio"]:checked {
 
 }
 
-#ticTacToeLudo101 #pluginGameGrid::before {
+#ticTacToeLudo101 #pluginGameBoard::before {
     content: '';
     background-image: url(../images/grille.svg);
     background-size: contain;
@@ -357,23 +357,23 @@ input[type="radio"]:checked {
     grid-area: C3;
 }
 
-#ticTacToeLudo101 .o {
+#ticTacToeLudo101 .pluginGameCell.o {
     background-image: url(../images/o.svg);
 
 }
 
-#ticTacToeLudo101 .x {
+#ticTacToeLudo101 .pluginGameCell.x {
     background-image: url(../images/x.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.d1::after,
-#ticTacToeLudo101 #pluginGameGrid.d2::after,
-#ticTacToeLudo101 #pluginGameGrid.r1::after,
-#ticTacToeLudo101 #pluginGameGrid.r2::after,
-#ticTacToeLudo101 #pluginGameGrid.r3::after,
-#ticTacToeLudo101 #pluginGameGrid.c1::after,
-#ticTacToeLudo101 #pluginGameGrid.c2::after,
-#ticTacToeLudo101 #pluginGameGrid.c3::after {
+#ticTacToeLudo101 #pluginGameBoard.d1::after,
+#ticTacToeLudo101 #pluginGameBoard.d2::after,
+#ticTacToeLudo101 #pluginGameBoard.r1::after,
+#ticTacToeLudo101 #pluginGameBoard.r2::after,
+#ticTacToeLudo101 #pluginGameBoard.r3::after,
+#ticTacToeLudo101 #pluginGameBoard.c1::after,
+#ticTacToeLudo101 #pluginGameBoard.c2::after,
+#ticTacToeLudo101 #pluginGameBoard.c3::after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -381,51 +381,51 @@ input[type="radio"]:checked {
     grid-column: 1 / -1;
 }
 
-#ticTacToeLudo101 #pluginGameGrid.d1::after {
+#ticTacToeLudo101 #pluginGameBoard.d1::after {
     content: '';
     background-image: url(../images/d1.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.d2::after {
+#ticTacToeLudo101 #pluginGameBoard.d2::after {
     content: '';
     background-image: url(../images/d2.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.r1::after {
+#ticTacToeLudo101 #pluginGameBoard.r1::after {
     content: '';
     background-image: url(../images/r1.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.r2::after {
+#ticTacToeLudo101 #pluginGameBoard.r2::after {
     content: '';
     background-image: url(../images/r2.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.r3::after {
+#ticTacToeLudo101 #pluginGameBoard.r3::after {
     content: '';
     background-image: url(../images/r3.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.c1::after {
+#ticTacToeLudo101 #pluginGameBoard.c1::after {
     content: '';
     background-image: url(../images/c1.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.c2::after {
+#ticTacToeLudo101 #pluginGameBoard.c2::after {
     content: '';
     background-image: url(../images/c2.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.c3::after {
+#ticTacToeLudo101 #pluginGameBoard.c3::after {
     content: '';
     background-image: url(../images/c3.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.host .pluginGameCell:hover {
+#ticTacToeLudo101 #pluginGameBoard.x .pluginGameCell.empty:hover {
     background-image: url(../images/x-shaded.svg);
 }
 
-#ticTacToeLudo101 #pluginGameGrid.guest .pluginGameCell.empty:hover {
+#ticTacToeLudo101 #pluginGameBoard.o .pluginGameCell.empty:hover {
     background-image: url(../images/o-shaded.svg);
     background-size: contain;
     background-repeat: no-repeat;
