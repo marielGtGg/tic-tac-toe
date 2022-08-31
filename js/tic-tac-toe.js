@@ -38,16 +38,6 @@ class gameTicTacToe {
         gameTicTacToe.setEventToGrid(this);  //retire et recrée les eventlistner   
         gameTicTacToe.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
     }
-/*
-    updateScore() {
-        console.log(`Host ${this.scoreHost[0]} win`);
-        console.log(`Host ${this.scoreHost[1]} lost`);
-        console.log(`Host ${this.scoreHost[2]} tie`);
-        console.log(`Guest ${this.scoreHost[1]} win`);
-        console.log(`Guest ${this.scoreHost[2]} lost`);
-        console.log(`Guest ${this.scoreHost[0]} tie`);
-    }
-*/
 
     /*Fonction à placer les event sur tout les cases de la grid*/
     setEventToGrid() {
@@ -68,26 +58,7 @@ class gameTicTacToe {
             cell.classList.add(gameTicTacToe.activePlayer);
             cell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
             gameTicTacToe.switchPlayer();
-        }
-    /*winVerif() {
-        for (let i = 0; i < this.winCondition.length; i++) {
-            if (this.winCondition[i][0] === this.winCondition[i][1] === this.winCondition[i][2]) {
-                console.log("It's a win!");
-            } else {
-                console.log("No wins for now!")
-            }
-        }
-    }
-    askContinue() {
-        let continueGame = prompt("On continue? (y or n)");
-        console.log(continueGame);
-        if (continueGame == "n" || continueGame == "") {
-            console.log("NO")
-            return false;
-        }
-        return true;
-    }*/
-    
+        }   
     }
 
     setActivePlayer() {
@@ -113,7 +84,6 @@ class gameTicTacToe {
         }
     }
 }
-
 
 
 window.onload = function(){
