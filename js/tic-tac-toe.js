@@ -31,12 +31,12 @@ class gameTicTacToe {
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
-        for (var i=0; i< this.cells.length; i++){
-            this.cells[i].classList.remove("o", "x", "empty");
-            this.cells[i].classList.add("empty");
+        for (var i=0; i< gameTicTacToe.cells.length; i++){
+            gameTicTacToe.cells[i].classList.remove("o", "x", "empty");
+            gameTicTacToe.cells[i].classList.add("empty");
         }; 
-        this.setEventToGrid(this);  //retire et recrée les eventlistner   
-        this.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
+        gameTicTacToe.setEventToGrid(this);  //retire et recrée les eventlistner   
+        gameTicTacToe.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
     }
 /*
     updateScore() {
@@ -50,24 +50,24 @@ class gameTicTacToe {
 */
 
     /*Fonction à placer les event sur tout les cases de la grid*/
-    setEventToGrid(game) {
+    setEventToGrid() {
         //j'ai mis la fonction dans une constante parce que
         //si on la passe en fonction anonyme direment dans le evetListener, 
         //le removeEventListener ne reconnait pas que c'est la même fonction et ne fonctionne pas.
         const onClick = function() {
-            playTurn(this, game);
+            playTurn(this);
         }
 
-        for (var i=0; i < game.cells.length; i++){
-            game.cells[i].replaceWith(game.cells[i].cloneNode()); //retire tous les eventListeners (pour le cas d'un reset où il reste des eventListener sur certaines cases)
-            game.cells[i].addEventListener('click', onClick);
+        for (var i=0; i < gameTicTacToe.cells.length; i++){
+            gameTicTacToe.cells[i].replaceWith(gameTicTacToe.cells[i].cloneNode()); //retire tous les eventListeners (pour le cas d'un reset où il reste des eventListener sur certaines cases)
+            gameTicTacToe.cells[i].addEventListener('click', onClick);
         }
 
-        function playTurn(cell, game) {
+        function playTurn(cell) {
             cell.classList.remove("empty");
-            cell.classList.add(game.activePlayer);
+            cell.classList.add(gameTicTacToe.activePlayer);
             cell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
-            game.switchPlayer(game);
+            gameTicTacToe.switchPlayer();
         }
     /*winVerif() {
         for (let i = 0; i < this.winCondition.length; i++) {
@@ -92,24 +92,24 @@ class gameTicTacToe {
 
     setActivePlayer() {
         //pour le moment déternime le premier joueur de façon aléatoire
-        this.activePlayer = this.players[Math.floor(Math.random() * 2)];
-        this.switchPlayer(this);
+        this.activePlayer = gameTicTacToe.players[Math.floor(Math.random() * 2)];
+        this.switchPlayer();
     }
     
-    switchPlayer(game) {
-        game.activePlayer = game.activePlayer == game.players[0] ? game.players[1] : game.players[0];
+    switchPlayer() {
+        gameTicTacToe.activePlayer = gameTicTacToe.activePlayer == gameTicTacToe.players[0] ? gameTicTacToe.players[1] : gameTicTacToe.players[0];
         
         //Pour le hover sur les cases de la grille
-        game.board.classList.remove("x", "o"); 
-        game.board.classList.add(this.activePlayer);
+        gameTicTacToe.board.classList.remove("x", "o"); 
+        gameTicTacToe.board.classList.add(this.activePlayer);
 
         //Pour la section des joueurs
-        game.host.classList.remove("activePlayer");
-        game.guest.classList.remove("activePlayer");
-        if (game.activePlayer == "x") {
-            game.host.classList.add("activePlayer");
+        gameTicTacToe.host.classList.remove("activePlayer");
+        gameTicTacToe.guest.classList.remove("activePlayer");
+        if (gameTicTacToe.activePlayer == "x") {
+            gameTicTacToe.host.classList.add("activePlayer");
         } else {
-            game.guest.classList.add("activePlayer");
+            gameTicTacToe.guest.classList.add("activePlayer");
         }
     }
 }
@@ -120,10 +120,10 @@ window.onload = function(){
     let game = new gameTicTacToe; //Déplacé dans le onLoad car il va chercher des éléments du html donc la page doit être loadée
 
     document.getElementById("pluginResetGrid").addEventListener("click",function(){
-        game.resetBoard(game);
+        game.resetBoard();
     })
 
-    game.setEventToGrid(game);
+    game.setEventToGrid();
 
 }
     
