@@ -88,7 +88,7 @@
                     </ul>
                 </section>
             </form>
-            <div id="pluginResetGrid" class="button box-shadow">Réinitialiser</div>
+            <div id="pluginResetGrid" class="button box-shadow">Nouvelle partie</div>
             <!-- test -->
         </section>
 

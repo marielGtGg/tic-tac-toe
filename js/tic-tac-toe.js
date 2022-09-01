@@ -31,7 +31,7 @@ class gameTicTacToe {
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
-        for (var i=0; i< this.cells.length; i++){
+        for (var i=0; i < this.cells.length; i++){
             this.cells[i].classList.remove("o", "x", "empty");
             this.cells[i].classList.add("empty");
         }; 
@@ -46,7 +46,8 @@ class gameTicTacToe {
         //le removeEventListener ne reconnait pas que c'est la même fonction et ne fonctionne pas.
         let self = this //permet de référer à la classe dans la fonction imbriquée
         const onClick = function() {
-            playTurn(this);
+            playTurn(this); //Ici this réfère à l'élément cliqué (la cellule)
+            //TODO: fonction qui vérifie les conditions de victoire 
         }
 
         for (var i=0; i < this.cells.length; i++){
