@@ -30,6 +30,17 @@ class gameTicTacToe {
             [0, 4, 8],
             [2, 4, 6]
         ];
+        this.boardStatus = [
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty"
+        ];
         this.setActivePlayer() 
     }
 /*
@@ -104,7 +115,7 @@ function onResult(result, scores) {
             cell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
             game.switchPlayer(game);
         }
-
+    }
 
     setActivePlayer() {
         //pour le moment déternime le premier joueur de façon aléatoire
