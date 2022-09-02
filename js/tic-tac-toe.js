@@ -116,7 +116,7 @@ function onResult(result, scores) {
             game.switchPlayer(game);
         }
 
-
+    }
     setActivePlayer() {
         //pour le moment déternime le premier joueur de façon aléatoire
         this.activePlayer = this.players[Math.floor(Math.random() * 2)];
