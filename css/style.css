@@ -276,9 +276,9 @@ input[type="radio"]:checked {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5%;
     grid-template-areas:
-        "A1 A2 A3"
-        "B1 B2 B3"
-        "C1 C2 C3";
+        "cell-0 cell-1 cell-2"
+        "cell-3 cell-4 cell-5"
+        "cell-6 cell-7 cell-8";
 }
 
 #ticTacToeLudo101 #pluginGameBoard::before {
@@ -295,40 +295,40 @@ input[type="radio"]:checked {
     background-position: center;
 }
 
-#ticTacToeLudo101 .A1 {
-    grid-area: A1;
+#ticTacToeLudo101 #cell-0 {
+    grid-area: cell-0;
 }
 
-#ticTacToeLudo101 .A2 {
-    grid-area: A2;
+#ticTacToeLudo101 #cell-1 {
+    grid-area: cell-1;
 }
 
-#ticTacToeLudo101 .A3 {
-    grid-area: A3;
+#ticTacToeLudo101 #cell-2 {
+    grid-area: cell-2;
 }
 
-#ticTacToeLudo101 .B1 {
-    grid-area: B1;
+#ticTacToeLudo101 #cell-3 {
+    grid-area: cell-3;
 }
 
-#ticTacToeLudo101 .B2 {
-    grid-area: B2;
+#ticTacToeLudo101 #cell-4 {
+    grid-area: cell-4;
 }
 
-#ticTacToeLudo101 .B3 {
-    grid-area: B3;
+#ticTacToeLudo101 #cell-5 {
+    grid-area: cell-5;
 }
 
-#ticTacToeLudo101 .C1 {
-    grid-area: C1;
+#ticTacToeLudo101 #cell-6 {
+    grid-area: cell-6;
 }
 
-#ticTacToeLudo101 .C2 {
-    grid-area: C2;
+#ticTacToeLudo101 #cell-7 {
+    grid-area: cell-7;
 }
 
-#ticTacToeLudo101 .C3 {
-    grid-area: C3;
+#ticTacToeLudo101 #cell-8 {
+    grid-area: cell-8;
 }
 
 #ticTacToeLudo101 .pluginGameCell.o {

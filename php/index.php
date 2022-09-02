@@ -32,15 +32,15 @@
         </section>
        <section id="pluginGameContainer">
             <div id="pluginGameBoard" class="">
-                <div class="pluginGameCell A1 empty"></div>
-                <div class="pluginGameCell A2 empty"></div>
-                <div class="pluginGameCell A3 empty"></div>
-                <div class="pluginGameCell B1 empty"></div>
-                <div class="pluginGameCell B2 empty"></div>
-                <div class="pluginGameCell B3 empty"></div>
-                <div class="pluginGameCell C1 empty"></div>
-                <div class="pluginGameCell C2 empty"></div>
-                <div class="pluginGameCell C3 empty"></div>
+                <div id="cell-0" class="pluginGameCell empty"></div>
+                <div id="cell-1" class="pluginGameCell empty"></div>
+                <div id="cell-2" class="pluginGameCell empty"></div>
+                <div id="cell-3" class="pluginGameCell empty"></div>
+                <div id="cell-4" class="pluginGameCell empty"></div>
+                <div id="cell-5" class="pluginGameCell empty"></div>
+                <div id="cell-6" class="pluginGameCell empty"></div>
+                <div id="cell-7" class="pluginGameCell empty"></div>
+                <div id="cell-8" class="pluginGameCell empty"></div>
             </div>
         </section>
         <section id="pluginParameters">
