@@ -30,6 +30,17 @@ class gameTicTacToe {
             [0, 4, 8],
             [2, 4, 6]
         ];
+        this.boardStatus = [
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty"
+        ];
         this.setActivePlayer() 
     }
 /*
