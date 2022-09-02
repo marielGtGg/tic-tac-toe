@@ -21,14 +21,14 @@ class gameTicTacToe {
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
         this.winCondition = [
-            [[0, 1, 2], "r1"],
-            [[3, 4, 5], "r2"],
-            [[6, 7, 8], "r3"],
-            [[0, 3, 6], "c1"],
-            [[1, 4, 7], "c2"],
-            [[2, 5, 8], "c3"],
-            [[0, 4, 8], "d1"],
-            [[2, 4, 6], "d2"]
+            ["r1", [0, 1, 2]],
+            ["r2", [3, 4, 5]],
+            ["r3", [6, 7, 8]],
+            ["c1", [0, 3, 6]],
+            ["c2", [1, 4, 7]],
+            ["c3", [2, 5, 8]],
+            ["d1", [0, 4, 8]],
+            ["d2", [2, 4, 6]]
         ];
         this.boardStatus = [
             "empty",
@@ -97,8 +97,9 @@ function updateScores(X, O) {
             clickedCell.classList.remove("empty");
             clickedCell.classList.add(self.activePlayer);
             clickedCell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
-            
-            self.switchPlayer(game);
+            self.boardStatus[clickedCell.id.substring(5)] = self.activePlayer;
+            console.log(self.boardStatus) //à enlever par la suite
+            self.switchPlayer();
         }
     }
 
