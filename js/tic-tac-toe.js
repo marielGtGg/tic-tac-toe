@@ -67,24 +67,7 @@ function updateScores(X, O) {
         }
     }
 */
-/*var placeholder = document.getElementById("placeholder");
 
-var tictactoe = new TicTacToe(placeholder, 1, onResult);
-
-function onResult(result, scores) {
-	if(result == 'draw') {
-		alert("It's a draw !");
-	} else {
-		alert(result + " has won");
-		updateScores(scores.X, scores.O);
-	}
-	tictactoe.empty();
-}
-
-
-    
-    }
-*/
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
         for (var i=0; i< this.cells.length; i++){
