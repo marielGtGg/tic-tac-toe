@@ -21,11 +21,11 @@ class gameTicTacToe {
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
 
-
-        this.timeParam = [document.getElementById("plugin15s"),
-                          document.getElementById("plugin30s"),
-                          document.getElementById("pluginTimeless")
-                        ];
+        this.timeParam = [
+            document.getElementById("plugin15s"),
+            document.getElementById("plugin30s"),
+            document.getElementById("pluginTimeless")            
+        ];
         this.runningTimer;
 
 
@@ -40,6 +40,7 @@ class gameTicTacToe {
             ["d1", [0, 4, 8]],
             ["d2", [2, 4, 6]]
         ];
+
         this.boardStatus = [
             "empty",
             "empty",
@@ -87,7 +88,17 @@ function updateScores(X, O) {
         }; 
         this.setEventToGrid();  //retire et recrée les eventlistner   
         this.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
-
+        this.boardStatus = [
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty",
+            "empty"
+        ]; //il y a probablement une meilleure façon de faire...
         this.resetTimer(); //remet le timer à 00:00
     }
 
@@ -141,8 +152,8 @@ function updateScores(X, O) {
             this.guest.classList.add("activePlayer");
         }
     }
-    //DEBUT Fonctions lier au timer
-    timeParameterActive(){
+    //DEBUT Fonctions liées au timer
+    getActiveTimeParameter(){
         if (document.getElementById("plugin15s").checked == true){
             return 15
         }
@@ -150,40 +161,40 @@ function updateScores(X, O) {
             return 30
         }
         if (document.getElementById("pluginTimeless").checked){
-            return 9999
+            return null
         }
     }
 
     showTime(actualTime) {
         if (actualTime < 10){
-        document.getElementById("pluginTimeShow").innerHTML = "00:0"+actualTime;
+            document.getElementById("pluginTimeShow").innerHTML = "00:0"+actualTime;
         }else {
-        document.getElementById("pluginTimeShow").innerHTML = "00:"+actualTime;
+            document.getElementById("pluginTimeShow").innerHTML = "00:"+actualTime;
         }
     }
 
     decrementTime() {
-        let time = this.timeParameterActive();
+        let time = this.getActiveTimeParameter();
         let self = this;
 
-        if (time === 9999){
+        if (!time){
             return false;
         }
 
         this.runningTimer = setInterval(() => {
-        if (time > 0) {
-        this.showTime(time);
-        time--;
-        } else {
-            this.selectRandomCell();
-            //clearInterval(this.runningTimer);
-        }
+            if (time > 0) {
+                this.showTime(time);
+                time--;
+            } else {
+                this.selectRandomCell();
+                //clearInterval(this.runningTimer);
+            }
         }, 1000);
-        }
+    }
     
     stopTimer(){
         clearInterval(this.runningTimer);
-        document.getElementById("pluginTimeShow").innerHTML = "Le "+this.activePlayer + " joue!";
+        document.getElementById("pluginTimeShow").innerHTML = "Le " + this.activePlayer + " joue!";
     }
 
     resetTimer(){
@@ -197,7 +208,7 @@ function updateScores(X, O) {
         emptyCells[Math.floor(Math.random() * emptyCells.length)].click();
     }
 
-    //FIN Fonctions lier au timer
+    //FIN Fonctions liées au timer
 
     disableParameters(){
         for(let i=0; i< this.timeParam.length; i++){
