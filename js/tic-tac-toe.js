@@ -16,6 +16,16 @@ class gameTicTacToe {
         this.players = ["x", "o"];
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
+
+
+        this.timeParam = [document.getElementById("plugin15s"),
+                          document.getElementById("plugin30s"),
+                          document.getElementById("pluginTimeless")
+                        ];
+        this.runningTimer;
+
+
+
         this.winCondition = [
             [0, 1, 2],
             [3, 4, 5],
@@ -26,7 +36,8 @@ class gameTicTacToe {
             [0, 4, 8],
             [2, 4, 6]
         ];
-        this.setActivePlayer() 
+        this.setActivePlayer()
+        
     }
 
     /*Fonction à lier au bouton reset*/
@@ -37,6 +48,8 @@ class gameTicTacToe {
         }; 
         this.setEventToGrid();  //retire et recrée les eventlistner   
         this.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
+
+        this.resetTimer(); //remet le timer à 00:00
     }
 
     /*Fonction à placer les event sur tout les cases de la grid*/
@@ -56,10 +69,13 @@ class gameTicTacToe {
         }
 
         function playTurn(clickedCell) {
+            self.disableParameters();
             clickedCell.classList.remove("empty");
             clickedCell.classList.add(self.activePlayer);
             clickedCell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
             self.switchPlayer();
+            self.stopTimer();
+            self.decrementTime();
         }   
     }
 
@@ -85,6 +101,76 @@ class gameTicTacToe {
             this.guest.classList.add("activePlayer");
         }
     }
+    //DEBUT Fonctions lier au timer
+    timeParameterActive(){
+        if (document.getElementById("plugin15s").checked == true){
+            return 15
+        }
+        if (document.getElementById("plugin30s").checked){
+            return 30
+        }
+        if (document.getElementById("pluginTimeless").checked){
+            return 9999
+        }
+    }
+
+    showTime(actualTime) {
+        if (actualTime < 10){
+        document.getElementById("pluginTimeShow").innerHTML = "00:0"+actualTime;
+        }else {
+        document.getElementById("pluginTimeShow").innerHTML = "00:"+actualTime;
+        }
+    }
+
+    decrementTime() {
+        let time = this.timeParameterActive();
+        let self = this;
+
+        if (time === 9999){
+            return false;
+        }
+
+        this.runningTimer = setInterval(() => {
+        if (time > 0) {
+        this.showTime(time);
+        time--;
+        } else {
+            this.selectRandomCell();
+            //clearInterval(this.runningTimer);
+        }
+        }, 1000);
+        }
+    
+    stopTimer(){
+        clearInterval(this.runningTimer);
+        document.getElementById("pluginTimeShow").innerHTML = "Le "+this.activePlayer + " joue!";
+    }
+
+    resetTimer(){
+        clearInterval(this.runningTimer);
+        this.enableParameters();
+        document.getElementById("pluginTimeShow").innerHTML = "00:00";
+    }
+
+    selectRandomCell(){
+        let emptyCells = document.getElementsByClassName("empty");
+        emptyCells[Math.floor(Math.random() * emptyCells.length)].click();
+    }
+
+    //FIN Fonctions lier au timer
+
+    disableParameters(){
+        for(let i=0; i< this.timeParam.length; i++){
+            this.timeParam[i].disabled=true;
+        }
+    }
+
+    enableParameters(){
+        for(let i=0; i< this.timeParam.length; i++){
+            this.timeParam[i].disabled=false;
+        }
+    }
+
 }
 
 
