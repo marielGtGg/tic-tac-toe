@@ -21,11 +21,12 @@ class gameTicTacToe {
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
 
-        this.timeParam = [
+        this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]')
+        /*[
             document.getElementById("plugin15s"),
             document.getElementById("plugin30s"),
             document.getElementById("pluginTimeless")            
-        ];
+        ];*/
         this.runningTimer;
 
 
@@ -53,7 +54,6 @@ class gameTicTacToe {
             "empty"
         ];
         this.setActivePlayer()
-        
     }
 /*
 function updateScores(X, O) {
@@ -153,7 +153,11 @@ function updateScores(X, O) {
         }
     }
     //DEBUT Fonctions liées au timer
-    getActiveTimeParameter(){
+    getActiveTimeParam() {
+        return document.querySelector('input[name="pluginTimeRange"]:checked').value
+    }
+    /*
+    timeParameterActive(){
         if (document.getElementById("plugin15s").checked == true){
             return 15
         }
@@ -164,7 +168,15 @@ function updateScores(X, O) {
             return null
         }
     }
-
+    */
+   /*
+    setTimeParamListener() {
+        let self = this
+        this.timeParam.forEach(function(radioButton) {
+            radioButton.addEventListener('click', self.getActiveTimeParam)
+        })
+    }
+*/
     showTime(actualTime) {
         if (actualTime < 10){
             document.getElementById("pluginTimeShow").innerHTML = "00:0"+actualTime;
@@ -174,7 +186,7 @@ function updateScores(X, O) {
     }
 
     decrementTime() {
-        let time = this.getActiveTimeParameter();
+        let time = this.getActiveTimeParam();
         let self = this;
 
         if (!time){

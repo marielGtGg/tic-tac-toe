@@ -74,15 +74,15 @@
                     <h4>Limite de temps</h4>
                     <ul>
                         <li>
-                            <input type="radio" id="plugin15s" name="pluginTimeRange" value="form15s" checked>
+                            <input type="radio" id="plugin15s" name="pluginTimeRange" value="15" checked>
                             <label for="plugin15s">15 sec.</label>
                         </li>
                         <li>
-                            <input type="radio" id="plugin30s" name="pluginTimeRange" value="form30s">
+                            <input type="radio" id="plugin30s" name="pluginTimeRange" value="30">
                             <label for="plugin30s">30 sec.</label>
                         </li>
                         <li>
-                            <input type="radio" id="pluginTimeless" name="pluginTimeRange" value="formTimeless">
+                            <input type="radio" id="pluginTimeless" name="pluginTimeRange" value="">
                             <label for="pluginTimeless">Illimité</label>
                         </li>
                     </ul>
