@@ -399,3 +399,32 @@ input[type="radio"]:checked {
 #ticTacToeLudo101 #pluginGameBoard.o .pluginGameCell.empty:hover {
     background-image: url(../images/o-shaded.svg);
 }
+/* 
+#pluginModalWrapper {
+  position: fixed; 
+  display: inline;
+  z-index: 1; 
+  padding-top: 30%; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+#pluginModalWindow {
+    background-color: var(--boxBackground);
+    margin: auto;
+    padding: 20%;
+    border: 0px 3px solid var(--third);
+    width: 100%;
+}
+
+@media screen and (min-width: 1000px){
+    #pluginModalWrapper {
+        
+        padding-top: 10%;
+    }
+} */
