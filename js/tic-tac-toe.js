@@ -31,7 +31,7 @@ class gameTicTacToe {
 
 
 
-        this.winCondition = [
+        this.winConditions = [
             ["r1", [0, 1, 2]],
             ["r2", [3, 4, 5]],
             ["r3", [6, 7, 8]],
@@ -56,32 +56,41 @@ class gameTicTacToe {
         this.setActivePlayer()
     }
 
-   /* winVerif() {
+    winVerif() {
         let roundWon = false;
-        for (let i = 0; i <=7; i++) {
-        this.winCondition = winningConditions[i];
-        const a = this.board[winCondition[0]];
-        const b = this.board[winCondition[1]];
-        const c = this.board[winCondition[2]];
-        if (a === "" || b === "" || c === "") {
-        continue;
-    }
-        if (a === b && b === c) {
-        roundWon = true;
-        break;
-    }
-    
-  }
+        for (let i = 0; i < this.winConditions.length; i++) {
+            //this.winCondition = winningConditions[i];
+            //this.winCondition[i][0] nous donne la classe de pour chaque condition de victoire
+            //this.winCondition[i][1] nou donne accès au array qui continer les 3 cases à vérifier
+            const a = this.boardStatus[this.winConditions[i][1][0]];
+            const b = this.boardStatus[this.winConditions[i][1][1]];
+            const c = this.boardStatus[this.winConditions[i][1][2]];
+            /*if (a === "" || b === "" || c === "") {
+                continue;
+            }*/ //pas nécessaire, si la condition plus bas n'est pas vraie, la loop va continuer toute seule
+             //if (a === b && b === c) { cette véréfication ne fonctionne par parce que quand les trois cases sont "empty", ça devient vrai...
+            if (a === this.activePlayer && b === this.activePlayer && c === this.activePlayer) {
+                roundWon = true; //peut-être que ce n'est plus nécessaire?
+                console.log(this.winConditions[i][0])
+               //TODO Mettre la classe sur this.board. On a déjà accès à la bonne classe avec this.winConditions[i][0] (avec le i on est déjà sur la bonne classe)
+               //TODO enlever les classes "x" et "o" sur this.board pour désactiver le hover
+               //TODO enlever les eventlistner qui reste pour ne plus pouvoir cliquer sur les cases
+               this.updateScore() // fonction à faire
+               //break;
+                return true; //retourne vrai si on a trouvé une victoire et met fin à la loop
+            }  
+        }
+        return false; //si on est passé au travers de al boucle sans trouvé le victoire on retour faux
 
-  if (roundWon) {
-    ajouter les lignes sur la victoire ?
-  }
+        /*if (roundWon) {
+            ajouter les lignes sur la victoire ?
+        }*/ //Je pense que c'est plus simple de le faire dans la loop précédente au moment où on trouve la victoire et simplement de mettre fin à la loop
 
     }
-    updatescore() {
+    updateScore() {
     }
 
-/*
+
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
@@ -127,9 +136,11 @@ class gameTicTacToe {
             clickedCell.removeEventListener('click', onClick); //empêche de rejouer sur la même case
             self.boardStatus[clickedCell.id.substring(5)] = self.activePlayer;
             console.log(self.boardStatus) //à enlever par la suite
-            self.switchPlayer();
             self.stopTimer();
-            self.decrementTime();
+            if (self.winVerif() === false) { //vérifie s'il faut continuer le jeu ou non
+                self.switchPlayer();
+                self.decrementTime();    
+            }; 
         }   
     }
 
@@ -192,6 +203,8 @@ class gameTicTacToe {
         let time = this.getActiveTimeParam();
         let self = this;
 
+        document.getElementById("pluginTimeShow").innerHTML = "Le " + this.activePlayer + " joue!";
+
         if (!time){
             return false;
         }
@@ -209,7 +222,6 @@ class gameTicTacToe {
     
     stopTimer(){
         clearInterval(this.runningTimer);
-        document.getElementById("pluginTimeShow").innerHTML = "Le " + this.activePlayer + " joue!";
     }
 
     resetTimer(){
