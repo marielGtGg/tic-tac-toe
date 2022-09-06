@@ -60,27 +60,29 @@ class gameTicTacToe {
         let roundWon = false;
         for (let i = 0; i < this.winConditions.length; i++) {
             //this.winCondition = winningConditions[i];
-            //this.winCondition[i][0] nous donne la classe de pour chaque condition de victoire
-            //this.winCondition[i][1] nou donne accès au array qui continer les 3 cases à vérifier
+            //this.winCondition[i][0] nous donne la classe pour chaque condition de victoire
+            //this.winCondition[i][1] nous donne accès au array qui contient les 3 cases à vérifier
+            //ici on va chercher le statut des trois cases à vérifier
             const a = this.boardStatus[this.winConditions[i][1][0]];
             const b = this.boardStatus[this.winConditions[i][1][1]];
             const c = this.boardStatus[this.winConditions[i][1][2]];
             /*if (a === "" || b === "" || c === "") {
                 continue;
-            }*/ //pas nécessaire, si la condition plus bas n'est pas vraie, la loop va continuer toute seule
+            }*/ //pas nécessaire, si la condition de victoire plus bas n'est pas vraie, la loop va continuer toute seule
              //if (a === b && b === c) { cette véréfication ne fonctionne par parce que quand les trois cases sont "empty", ça devient vrai...
             if (a === this.activePlayer && b === this.activePlayer && c === this.activePlayer) {
                 roundWon = true; //peut-être que ce n'est plus nécessaire?
-                console.log(this.winConditions[i][0])
-               //TODO Mettre la classe sur this.board. On a déjà accès à la bonne classe avec this.winConditions[i][0] (avec le i on est déjà sur la bonne classe)
+                console.log(this.winConditions[i][0]) // en attendant pour voir que ça fonctionne
+               //TODO Mettre la classe de victoire sur this.board. On a déjà accès à la bonne classe avec this.winConditions[i][0].
+               //(comme on est toujours à l'intérieur de la loop on est sur le [i] de la victoire)
                //TODO enlever les classes "x" et "o" sur this.board pour désactiver le hover
-               //TODO enlever les eventlistner qui reste pour ne plus pouvoir cliquer sur les cases
+               //TODO enlever les eventlistner qui reste pour ne plus pouvoir cliquer sur les cases "empty"
                this.updateScore() // fonction à faire
                //break;
                 return true; //retourne vrai si on a trouvé une victoire et met fin à la loop
             }  
         }
-        return false; //si on est passé au travers de al boucle sans trouvé le victoire on retour faux
+        return false; //si on est passé au travers de la boucle sans trouver de victoire on retourne faux
 
         /*if (roundWon) {
             ajouter les lignes sur la victoire ?
