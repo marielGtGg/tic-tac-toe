@@ -55,30 +55,33 @@ class gameTicTacToe {
         ];
         this.setActivePlayer()
     }
+
+   /* winVerif() {
+        let roundWon = false;
+        for (let i = 0; i <=7; i++) {
+        this.winCondition = winningConditions[i];
+        const a = this.board[winCondition[0]];
+        const b = this.board[winCondition[1]];
+        const c = this.board[winCondition[2]];
+        if (a === "" || b === "" || c === "") {
+        continue;
+    }
+        if (a === b && b === c) {
+        roundWon = true;
+        break;
+    }
+    
+  }
+
+  if (roundWon) {
+    ajouter les lignes sur la victoire ?
+  }
+
+    }
+    updatescore() {
+    }
+
 /*
-function updateScores(X, O) {
-	document.querySelector("#pluginGuestPlayer #pluginGuestWon").innerHTML = X;
-	document.querySelector("#pluginGuestPlayer #pluginHostWon").innerHTML = O;	
-}
-    updateScore() {
-        console.log(`Host ${this.scoreHost[0]} win`);
-        console.log(`Host ${this.scoreHost[1]} lost`);
-        console.log(`Host ${this.scoreHost[2]} tie`);
-        console.log(`Guest ${this.scoreHost[1]} win`);
-        console.log(`Guest ${this.scoreHost[2]} lost`);
-        console.log(`Guest ${this.scoreHost[0]} tie`);
-    }
-*/
-/*winVerif() {
-        for (let i = 0; i < this.winCondition.length; i++) {
-            if (this.winCondition[i][0] === this.winCondition[i][1] === this.winCondition[i][2]) {
-                this.board.classList.add("");
-            } else {
-                this.board.classList.add("null");
-            }
-        }
-    }
-*/
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
