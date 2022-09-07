@@ -15,12 +15,12 @@ class gameTicTacToe {
             X: 0,
             O: 0,
         };
-        this.scoreHost = [0, 0, 0]; /* Win/Lost/Tie */
-        this.scoreGuest = [0, 0, 0]; /* Win/Lost/Tie */
+        this.scoreHost = [0, 0]; /* Win/Lost */
+        this.scoreGuest = [0, 0]; /* Win/Lost */
         this.players = ["x", "o"];
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
-
+        this.timeBox = document.querySelector("#pluginTimeShow")
         this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]')
         /*[
             document.getElementById("plugin15s"),
@@ -57,42 +57,40 @@ class gameTicTacToe {
     }
 
     winVerif() {
-        let roundWon = false;
         for (let i = 0; i < this.winConditions.length; i++) {
-            //this.winCondition = winningConditions[i];
-            //this.winCondition[i][0] nous donne la classe pour chaque condition de victoire
-            //this.winCondition[i][1] nous donne accès au array qui contient les 3 cases à vérifier
-            //ici on va chercher le statut des trois cases à vérifier
-            const a = this.boardStatus[this.winConditions[i][1][0]];
-            const b = this.boardStatus[this.winConditions[i][1][1]];
-            const c = this.boardStatus[this.winConditions[i][1][2]];
-            /*if (a === "" || b === "" || c === "") {
-                continue;
-            }*/ //pas nécessaire, si la condition de victoire plus bas n'est pas vraie, la loop va continuer toute seule
-             //if (a === b && b === c) { cette véréfication ne fonctionne par parce que quand les trois cases sont "empty", ça devient vrai...
-            if (a === this.activePlayer && b === this.activePlayer && c === this.activePlayer) {
-                roundWon = true; //peut-être que ce n'est plus nécessaire?
-                console.log(this.winConditions[i][0]) // en attendant pour voir que ça fonctionne
-               //TODO Mettre la classe de victoire sur this.board. On a déjà accès à la bonne classe avec this.winConditions[i][0].
-               //(comme on est toujours à l'intérieur de la loop on est sur le [i] de la victoire)
-               //TODO enlever les classes "x" et "o" sur this.board pour désactiver le hover
-               //TODO enlever les eventlistner qui reste pour ne plus pouvoir cliquer sur les cases "empty"
-               this.updateScore() // fonction à faire
-               //break;
+            let cellA = this.boardStatus[this.winConditions[i][1][0]];
+            let cellB = this.boardStatus[this.winConditions[i][1][1]];
+            let cellC = this.boardStatus[this.winConditions[i][1][2]];
+
+            if (cellA === this.activePlayer && cellB === this.activePlayer && cellC === this.activePlayer) {
+                this.board.classList.add(this.winConditions[i][0])
+                let emptyCells = this.getEmptyCells();
+                for (let i = 0; i < emptyCells.length; i++) {
+                    emptyCells[i].classList.remove("empty")
+                    emptyCells[i].replaceWith(emptyCells[i].cloneNode());
+                }
+                this.updateScore() // fonction à faire
                 return true; //retourne vrai si on a trouvé une victoire et met fin à la loop
             }  
         }
-        return false; //si on est passé au travers de la boucle sans trouver de victoire on retourne faux
-
-        /*if (roundWon) {
-            ajouter les lignes sur la victoire ?
-        }*/ //Je pense que c'est plus simple de le faire dans la loop précédente au moment où on trouve la victoire et simplement de mettre fin à la loop
-
+        //Vérifier nul
+        let emptyCells = this.getEmptyCells();
+        if (emptyCells.length === 0) {
+            this.board.classList.add("null");
+            return true;
+        }
+        return false;  
     }
+
     updateScore() {
+        //augmenter de 1 dans this.scoreHost et this.scoreGuest
+        //aller chercher le bon Li .innerHtml = this.scoreHost[0]
     }
 
-
+    getEmptyCells() {
+        let emptyCells = document.querySelectorAll("#pluginGameBoard > .empty");
+        return emptyCells
+    }
 
     /*Fonction à lier au bouton reset*/
     resetBoard() {;
@@ -100,6 +98,10 @@ class gameTicTacToe {
             this.cells[i].classList.remove("o", "x", "empty");
             this.cells[i].classList.add("empty");
         }; 
+        for (var i=0; i < this.winConditions.length; i++) {
+            this.board.classList.remove(this.winConditions[i][0])
+        };
+        this.board.classList.remove("null")
         this.setEventToGrid();  //retire et recrée les eventlistner   
         this.setActivePlayer(); //redétermine le premier joueur de façon aléatoire
         this.boardStatus = [
@@ -112,15 +114,12 @@ class gameTicTacToe {
             "empty",
             "empty",
             "empty"
-        ]; //il y a probablement une meilleure façon de faire...
+        ]; 
         this.resetTimer(); //remet le timer à 00:00
     }
 
     /*Fonction à placer les event sur tout les cases de la grid*/
     setEventToGrid() {
-        //j'ai mis la fonction dans une constante parce que
-        //si on la passe en fonction anonyme direment dans le evetListener, 
-        //le removeEventListener ne reconnait pas que c'est la même fonction et ne fonctionne pas.
         let self = this //permet de référer à la classe dans la fonction imbriquée
         const onClick = function() {
             playTurn(this);
@@ -139,9 +138,11 @@ class gameTicTacToe {
             self.boardStatus[clickedCell.id.substring(5)] = self.activePlayer;
             console.log(self.boardStatus) //à enlever par la suite
             self.stopTimer();
-            if (self.winVerif() === false) { //vérifie s'il faut continuer le jeu ou non
+            if (self.winVerif()) { //vérifie s'il faut continuer le jeu ou non
+                self.timeBox.innerHTML = '---'; 
+            } else {
                 self.switchPlayer();
-                self.decrementTime();    
+                self.decrementTime();
             }; 
         }   
     }
@@ -195,17 +196,16 @@ class gameTicTacToe {
 */
     showTime(actualTime) {
         if (actualTime < 10){
-            document.getElementById("pluginTimeShow").innerHTML = "00:0"+actualTime;
+            this.timeBox.innerHTML = "00:0"+actualTime;
         }else {
-            document.getElementById("pluginTimeShow").innerHTML = "00:"+actualTime;
+            this.timeBox.innerHTML = "00:"+actualTime;
         }
     }
 
     decrementTime() {
         let time = this.getActiveTimeParam();
-        let self = this;
 
-        document.getElementById("pluginTimeShow").innerHTML = "Le " + this.activePlayer + " joue!";
+        this.timeBox.innerHTML = "Le " + this.activePlayer + " joue!";
 
         if (!time){
             return false;
@@ -229,11 +229,11 @@ class gameTicTacToe {
     resetTimer(){
         clearInterval(this.runningTimer);
         this.enableParameters();
-        document.getElementById("pluginTimeShow").innerHTML = "00:00";
+        this.timeBox.innerHTML = "00:00";
     }
 
     selectRandomCell(){
-        let emptyCells = document.getElementsByClassName("empty");
+        let emptyCells = this.getEmptyCells();
         emptyCells[Math.floor(Math.random() * emptyCells.length)].click();
     }
 

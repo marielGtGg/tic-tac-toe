@@ -93,12 +93,12 @@
         </section>
 
         <!-- Fenetre modale -->
-        <!-- <div id="pluginModalWrapper">
+        <div id="pluginModalWrapper" class="hidden">
             <div id="pluginModalWindow">
-                <label for="GuestNameInput"></label>
+                <label for="GuestNameInput">Qui vous affronte aujourd'hui?</label>
                 <input type="text" name="pluginGuestNameInput" id="GuestNameInput" placeholder="Nom du joueur 2" >
-                <div id="buttonAccept">Accepter</div>
+                <div id="buttonAccept">JOUER</div>
             </div>
-        </div> -->
+        </div> 
     </div>
 </div>
