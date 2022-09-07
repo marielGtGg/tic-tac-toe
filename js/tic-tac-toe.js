@@ -169,6 +169,17 @@ class gameTicTacToe {
             this.guest.classList.add("activePlayer");
         }
     }
+
+    setPlayButtonGetName(){
+        document.getElementById("buttonAccept").addEventListener("click",function(){
+            document.getElementById("pluginModalWrapper").classList.toggle("hidden");
+            this.name = document.getElementById("GuestNameInput").value;
+            if (this.name == ""){
+                this.name = "Invité"
+            }
+            document.getElementById("pluginGuest").innerHTML = this.name;
+        })
+    }
     //DEBUT Fonctions liées au timer
     getActiveTimeParam() {
         return document.querySelector('input[name="pluginTimeRange"]:checked').value
@@ -261,7 +272,7 @@ window.onload = function(){
     document.getElementById("pluginResetGrid").addEventListener("click",function(){
         game.resetBoard();
     })
-
+    game.setPlayButtonGetName();
     game.setEventToGrid();
 
 }
