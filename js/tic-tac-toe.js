@@ -18,10 +18,12 @@ class gameTicTacToe {
         this.scoreHost = [0, 0]; /* Win/Lost */
         this.scoreGuest = [0, 0]; /* Win/Lost */
         this.players = ["x", "o"];
+        this.lastWinner = "x";
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
         this.timeBox = document.querySelector("#pluginTimeShow")
         this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]')
+        this.firstPlayerParam = document.querySelectorAll('input[name="pluginFirstPlayer"]')
         /*[
             document.getElementById("plugin15s"),
             document.getElementById("plugin30s"),
@@ -69,7 +71,8 @@ class gameTicTacToe {
                     emptyCells[i].classList.remove("empty")
                     emptyCells[i].replaceWith(emptyCells[i].cloneNode());
                 }
-                this.updateScore() // fonction à faire
+                this.updateScore(); // fonction à faire
+                this.lastWinner = this.activePlayer;
                 return true; //retourne vrai si on a trouvé une victoire et met fin à la loop
             }  
         }
@@ -147,11 +150,7 @@ class gameTicTacToe {
         }   
     }
 
-    setActivePlayer() {
-        //pour le moment déternime le premier joueur de façon aléatoire
-        this.activePlayer = this.players[Math.floor(Math.random() * 2)];
-        this.switchPlayer(this);
-    }
+    
     
     switchPlayer() {
         this.activePlayer = this.activePlayer == this.players[0] ? this.players[1] : this.players[0];
@@ -249,6 +248,42 @@ class gameTicTacToe {
     }
 
     //FIN Fonctions liées au timer
+
+    //DEBUT Fonctions liées au Premier Joueur
+
+    setActivePlayer() {
+        let firstPlayer = document.querySelector('input[name="pluginFirstPlayer"]:checked').value;
+
+        if ( firstPlayer == 'formRandom'){
+            console.log("random");
+            //pour le moment déternime le premier joueur de façon aléatoire
+            this.activePlayer = this.players[Math.floor(Math.random() * 2)];
+            this.switchPlayer(this);
+        }else if (firstPlayer == 'formLastWinner'){
+            this.activePlayer = this.lastWinner;
+            console.log("formLastWinner");
+        }else if (firstPlayer == 'formLastLoser'){
+            if (this.lastWinner == 'x'){
+                this.activePlayer = 'o';
+                this.switchPlayer(this)
+            }else{
+                this.activePlayer = 'x';
+                this.switchPlayer(this)
+            };
+            console.log("formLastLoser");
+        }else if (firstPlayer == 'formPlayerHost'){
+            console.log("formPlayerHost")
+            this.activePlayer = this.players[1];
+            this.switchPlayer(this)
+        }else{
+            console.log("formPlayerGuest");
+            this.activePlayer = this.players[0];
+            this.switchPlayer(this)
+        }
+        
+    }
+
+    //FIN 
 
     disableParameters(){
         for(let i=0; i< this.timeParam.length; i++){
