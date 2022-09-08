@@ -99,7 +99,7 @@
        style="color-interpolation-filters:sRGB"
        id="filter9440"
        x="-0.0018041298"
-       y="-0.0091391976"
+       y="-0.0091391975"
        width="1.0036083"
        height="1.0182784">
       <feGaussianBlur
@@ -540,105 +540,179 @@
          x="-4.7219515"
          y="-30.767879">DES </tspan></text>
     <g
-       id="g17007"
-       transform="translate(5.4844497,-0.4165535)">
+       id="g16985"
+       transform="translate(0.5285063,-0.4165535)">
       <g
-         id="g16985"
-         transform="translate(-4.9559434)">
-        <text
-           xml:space="preserve"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#000000;fill-opacity:0.501961;stroke:none;stroke-width:0.385713;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter9440)"
-           x="46.515263"
-           y="21.253397"
-           id="text9306"
-           transform="matrix(1.0066519,0,0,0.99339205,-41.685914,-0.3051918)"><tspan
-             sodipodi:role="line"
-             id="tspan9304"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.501961;stroke:none;stroke-width:0.385713;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             x="46.515263"
-             y="21.253397">VICtoire</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.385713;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="5.1048059"
-           y="19.948801"
-           id="text9168"
-           transform="scale(1.0066519,0.99339205)"><tspan
-             sodipodi:role="line"
-             id="tspan9166"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.385713;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             x="5.1048059"
-             y="19.948801">VICtoire</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:none;fill-opacity:0.5;stroke:#3bdaf0;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="5.1048074"
-           y="19.948799"
-           id="text9172"
-           transform="scale(1.0066519,0.99339205)"><tspan
-             sodipodi:role="line"
-             id="tspan9170"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:0.5;stroke:#3bdaf0;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             x="5.1048074"
-             y="19.948799">VICtoire</tspan></text>
+         aria-label="VICtoire"
+         transform="matrix(1.0066519,0,0,0.99339205,-41.685914,-0.3051918)"
+         id="text9306"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill-opacity:0.501961;stroke-width:0.385713;filter:url(#filter9440)">
+        <path
+           d="m 47.721995,13.131157 h 2.042164 l -0.997876,4.432422 0.32489,0.847034 0.672986,-0.847034 1.044288,-4.432422 h 2.053766 l -1.19513,5.082202 -2.703545,3.040038 H 47.91925 l -1.322765,-3.040038 1.12551,-5.082202 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1004" />
+        <path
+           d="m 55.530943,13.131157 -1.856512,8.12224 h -2.042163 l 1.844908,-8.12224 h 2.053767 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1006" />
+        <path
+           d="m 55.554144,21.253397 -0.789018,-0.986272 1.380781,-6.149696 1.253146,-0.986272 h 3.109657 l 0.800621,0.986272 -0.464128,2.053766 h -2.053766 l 0.197254,-0.997875 h -0.986272 l -0.928256,4.037914 h 0.986272 l 0.266874,-0.997875 h 2.053766 l -0.464128,2.053766 -1.253145,0.986272 h -3.109658 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1008" />
+        <path
+           d="m 62.283997,13.131157 h 5.15182 l -0.475731,2.053766 H 65.45167 l -1.380781,6.068474 h -2.042163 l 1.380781,-6.068474 h -1.589638 l 0.464128,-2.053766 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1010" />
+        <path
+           d="m 68.921025,19.211234 h 1.055891 l 0.928256,-4.037914 h -1.055891 l -0.928256,4.037914 v 0 z m -1.462003,2.042163 -0.789018,-0.986272 1.392384,-6.149696 1.253146,-0.986272 h 3.040038 l 0.789018,0.986272 -1.380781,6.149696 -1.253146,0.986272 h -3.051641 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1012" />
+        <path
+           d="m 76.045375,13.131157 -1.856512,8.12224 H 72.1467 l 1.844908,-8.12224 h 2.053767 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1014" />
+        <path
+           d="m 77.704626,18.224962 v 0 l -0.731001,3.028435 h -2.042164 l 1.844909,-8.12224 h 4.09593 l 0.789017,0.997875 -0.452524,2.042163 -1.264749,1.055892 0.800621,0.997875 -0.475732,2.042163 -1.241542,0.986272 h -0.997875 l 0.661382,-3.028435 h -0.986272 z m 0.661383,-3.051642 -0.197255,0.997875 h 0.986272 L 79.4219,15.17332 h -1.055891 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1016" />
+        <path
+           d="m 83.320575,19.211234 h 3.040038 l -0.464128,2.042163 h -4.095929 l -0.789018,-0.986272 1.392384,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 l -0.197254,0.997875 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1018" />
       </g>
       <g
-         id="g16969"
-         transform="translate(-4.5686307)">
-        <g
-           aria-label="DES "
-           transform="matrix(0.99120528,0,0,0.97768556,2.3519653,49.131173)"
-           id="g16609"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none">
-          <path
-             d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path16603" />
-          <path
-             d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path16605" />
-          <path
-             d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path16607" />
-        </g>
-        <g
-           aria-label="DES "
-           transform="matrix(0.99120528,0,0,0.97768556,2.3519653,48.072839)"
-           id="text7238"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none">
-          <path
-             d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path7240" />
-          <path
-             d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path7242" />
-          <path
-             d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
-             id="path7244" />
-        </g>
-        <g
-           aria-label="DES "
-           transform="matrix(0.99120528,0,0,0.97768556,2.3519653,48.072839)"
-           id="g9130"
-           style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-          <path
-             d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="path9124" />
-          <path
-             d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="path9126" />
-          <path
-             d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
-             style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="path9128" />
-        </g>
+         aria-label="VICtoire"
+         transform="scale(1.0066519,0.99339205)"
+         id="text9168"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#01a7be;stroke-width:0.385713">
+        <path
+           d="m 6.3115387,11.826561 h 2.0421632 l -0.9978752,4.432422 0.3248896,0.847034 0.6729856,-0.847034 1.044288,-4.432422 h 2.0537661 l -1.195129,5.082202 -2.7035459,3.040038 H 6.5087931 L 5.1860283,16.908763 6.3115387,11.826561 Z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1021" />
+        <path
+           d="m 14.120486,11.826561 -1.856512,8.12224 h -2.042163 l 1.844909,-8.12224 h 2.053766 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1023" />
+        <path
+           d="m 14.143687,19.948801 -0.789017,-0.986272 1.38078,-6.149696 1.253146,-0.986272 h 3.109658 l 0.80062,0.986272 -0.464128,2.053766 H 17.38098 l 0.197254,-0.997875 h -0.986272 l -0.928256,4.037914 h 0.986272 l 0.266874,-0.997875 h 2.053766 l -0.464128,2.053766 -1.253145,0.986272 h -3.109658 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1025" />
+        <path
+           d="m 20.87354,11.826561 h 5.151821 l -0.475732,2.053766 h -1.508416 l -1.38078,6.068474 h -2.042164 l 1.380781,-6.068474 h -1.589638 l 0.464128,-2.053766 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1027" />
+        <path
+           d="m 27.510568,17.906638 h 1.055892 l 0.928256,-4.037914 h -1.055892 l -0.928256,4.037914 v 0 z m -1.462003,2.042163 -0.789017,-0.986272 1.392384,-6.149696 1.253145,-0.986272 h 3.040039 l 0.789017,0.986272 -1.380781,6.149696 -1.253145,0.986272 h -3.051642 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1029" />
+        <path
+           d="m 34.634918,11.826561 -1.856512,8.12224 h -2.042163 l 1.844909,-8.12224 h 2.053766 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1031" />
+        <path
+           d="m 36.294169,16.920366 v 0 l -0.731001,3.028435 h -2.042163 l 1.844908,-8.12224 h 4.09593 l 0.789018,0.997875 -0.452525,2.042163 -1.264749,1.055892 0.800621,0.997875 -0.475731,2.042163 -1.241543,0.986272 h -0.997875 l 0.661382,-3.028435 h -0.986272 z m 0.661383,-3.051642 -0.197255,0.997875 h 0.986272 l 0.266874,-0.997875 h -1.055891 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1033" />
+        <path
+           d="m 41.910118,17.906638 h 3.040038 l -0.464128,2.042163 h -4.095929 l -0.789018,-0.986272 1.392384,-6.149696 1.241543,-0.986272 h 4.095929 l -0.452525,2.042163 H 42.838374 L 42.5715,14.866599 h 3.109658 l -0.464128,2.042164 h -3.109658 l -0.197254,0.997875 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1035" />
+      </g>
+      <g
+         aria-label="VICtoire"
+         transform="scale(1.0066519,0.99339205)"
+         id="text9172"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:none;fill-opacity:0.5;stroke:#3bdaf0;stroke-width:0.529167">
+        <path
+           d="m 6.3115402,11.826559 h 2.0421632 l -0.9978752,4.432423 0.3248896,0.847033 0.6729856,-0.847033 1.044288,-4.432423 h 2.0537666 l -1.19513,5.082202 -2.7035454,3.040038 H 6.5087946 L 5.1860298,16.908761 6.3115402,11.826559 Z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1038" />
+        <path
+           d="m 14.120488,11.826559 -1.856512,8.12224 h -2.042164 l 1.844909,-8.12224 h 2.053767 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1040" />
+        <path
+           d="m 14.143689,19.948799 -0.789018,-0.986272 1.380781,-6.149696 1.253146,-0.986272 h 3.109657 l 0.800621,0.986272 -0.464128,2.053767 h -2.053766 l 0.197254,-0.997876 h -0.986272 l -0.928256,4.037914 h 0.986272 l 0.266874,-0.997875 h 2.053766 l -0.464128,2.053766 -1.253146,0.986272 h -3.109657 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1042" />
+        <path
+           d="m 20.873541,11.826559 h 5.151821 l -0.475731,2.053767 h -1.508416 l -1.380781,6.068473 h -2.042163 l 1.380781,-6.068473 h -1.589639 l 0.464128,-2.053767 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1044" />
+        <path
+           d="m 27.51057,17.906636 h 1.055891 l 0.928256,-4.037914 h -1.055891 l -0.928256,4.037914 v 0 z m -1.462003,2.042163 -0.789018,-0.986272 1.392384,-6.149696 1.253146,-0.986272 h 3.040038 l 0.789018,0.986272 -1.380781,6.149696 -1.253146,0.986272 h -3.051641 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1046" />
+        <path
+           d="m 34.63492,11.826559 -1.856512,8.12224 h -2.042164 l 1.844909,-8.12224 h 2.053767 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1048" />
+        <path
+           d="m 36.294171,16.920364 v 0 l -0.731002,3.028435 h -2.042163 l 1.844909,-8.12224 h 4.095929 l 0.789018,0.997875 -0.452525,2.042164 -1.264749,1.055891 0.800621,0.997875 -0.475731,2.042163 -1.241542,0.986272 h -0.997875 l 0.661382,-3.028435 h -0.986272 z m 0.661382,-3.051642 -0.197254,0.997876 h 0.986272 l 0.266873,-0.997876 h -1.055891 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1050" />
+        <path
+           d="m 41.910119,17.906636 h 3.040039 L 44.48603,19.948799 H 40.3901 l -0.789017,-0.986272 1.392384,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040039 l -0.266873,0.997876 h 3.109657 l -0.464128,2.042163 h -3.109657 l -0.197255,0.997875 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando"
+           id="path1052" />
+      </g>
+    </g>
+    <g
+       id="g16969"
+       transform="translate(0.915819,-0.4165535)">
+      <g
+         aria-label="DES "
+         transform="matrix(0.99120528,0,0,0.97768556,2.3519653,49.131173)"
+         id="g16609"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path16603" />
+        <path
+           d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path16605" />
+        <path
+           d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#000000;fill-opacity:0.49;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path16607" />
+      </g>
+      <g
+         aria-label="DES "
+         transform="matrix(0.99120528,0,0,0.97768556,2.3519653,48.072839)"
+         id="text7238"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path7240" />
+        <path
+           d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path7242" />
+        <path
+           d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:#01a7be;fill-opacity:1;stroke:none;stroke-width:0.537541;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path7244" />
+      </g>
+      <g
+         aria-label="DES "
+         transform="matrix(0.99120528,0,0,0.97768556,2.3519653,48.072839)"
+         id="g9130"
+         style="font-size:11.6032px;line-height:1.25;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display';fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           d="m 6.6693979,-18.46488 v 0 H 2.5734683 l 1.856512,-8.12224 h 4.0843264 l 0.8006208,0.986272 -1.392384,6.149696 z m -0.6613824,-6.080077 -0.928256,4.037914 h 1.0558912 l 0.928256,-4.037914 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path9124" />
+        <path
+           d="m 11.09021,-20.507043 h 3.040038 L 13.66612,-18.46488 H 9.5701907 l -0.7890176,-0.986272 1.3923839,-6.149696 1.241542,-0.986272 h 4.09593 l -0.452525,2.042163 h -3.040038 l -0.266874,0.997875 h 3.109658 l -0.464128,2.042164 h -3.109658 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path9126" />
+        <path
+           d="m 18.539464,-23.813955 0.197254,-0.719399 h -0.997875 l -0.32489,1.241543 h 2.053767 l 0.789017,0.997875 -0.591763,2.842784 -1.253146,0.986272 h -3.109657 l -0.789018,-0.986272 0.394509,-1.786893 h 2.053766 l -0.139238,0.719399 h 0.986272 l 0.336493,-1.253146 h -2.111783 l -0.731001,-0.986272 0.603366,-2.842784 1.253146,-0.986272 h 3.028435 l 0.858637,0.986272 -0.464128,1.786893 z"
+           style="font-family:Commando;-inkscape-font-specification:Commando;fill:none;fill-opacity:1;stroke:#3bdaf0;stroke-width:0.53754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path9128" />
       </g>
     </g>
     <g
