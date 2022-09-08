@@ -55,10 +55,12 @@ class gameTicTacToe {
             "empty",
             "empty"
         ];
-        this.setActivePlayer()
+        this.setActivePlayer();
     }
 
     winVerif() {
+        
+        console.log(this.activePlayer);
         for (let i = 0; i < this.winConditions.length; i++) {
             let cellA = this.boardStatus[this.winConditions[i][1][0]];
             let cellB = this.boardStatus[this.winConditions[i][1][1]];
@@ -67,12 +69,12 @@ class gameTicTacToe {
             if (cellA === this.activePlayer && cellB === this.activePlayer && cellC === this.activePlayer) {
                 this.board.classList.add(this.winConditions[i][0])
                 let emptyCells = this.getEmptyCells();
+                this.lastWinner = this.activePlayer; // Je n'arrive pas à pousser la variable...
                 for (let i = 0; i < emptyCells.length; i++) {
                     emptyCells[i].classList.remove("empty")
                     emptyCells[i].replaceWith(emptyCells[i].cloneNode());
                 }
                 this.updateScore(); // fonction à faire
-                this.lastWinner = this.activePlayer;
                 return true; //retourne vrai si on a trouvé une victoire et met fin à la loop
             }  
         }
@@ -252,6 +254,7 @@ class gameTicTacToe {
     //DEBUT Fonctions liées au Premier Joueur
 
     setActivePlayer() {
+        let self = this;
         let firstPlayer = document.querySelector('input[name="pluginFirstPlayer"]:checked').value;
 
         if ( firstPlayer == 'formRandom'){
@@ -262,15 +265,16 @@ class gameTicTacToe {
         }else if (firstPlayer == 'formLastWinner'){
             this.activePlayer = this.lastWinner;
             console.log("formLastWinner");
+
         }else if (firstPlayer == 'formLastLoser'){
-            if (this.lastWinner == 'x'){
-                this.activePlayer = 'o';
-                this.switchPlayer(this)
+            if (self.lastWinner == 'x'){
+                self.activePlayer = 'o';
             }else{
-                this.activePlayer = 'x';
-                this.switchPlayer(this)
+                self.activePlayer = 'x';
             };
+            this.switchPlayer(this);
             console.log("formLastLoser");
+
         }else if (firstPlayer == 'formPlayerHost'){
             console.log("formPlayerHost")
             this.activePlayer = this.players[1];
