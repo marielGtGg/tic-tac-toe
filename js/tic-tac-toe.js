@@ -22,14 +22,7 @@ class gameTicTacToe {
         this.timeBox = document.querySelector("#pluginTimeShow")
         this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]')
         this.firstPlayerParam = document.querySelectorAll('input[name="pluginFirstPlayer"]')
-        /*[
-            document.getElementById("plugin15s"),
-            document.getElementById("plugin30s"),
-            document.getElementById("pluginTimeless")            
-        ];*/
         this.runningTimer;
-
-
 
         this.winConditions = [
             ["r1", [0, 1, 2]],
@@ -67,7 +60,7 @@ class gameTicTacToe {
             if (cellA === this.activePlayer && cellB === this.activePlayer && cellC === this.activePlayer) {
                 this.board.classList.add(this.winConditions[i][0])
                 let emptyCells = this.getEmptyCells();
-                this.lastWinner = this.activePlayer; // Je n'arrive pas à pousser la variable...
+                this.lastWinner = this.activePlayer;
                 for (let i = 0; i < emptyCells.length; i++) {
                     emptyCells[i].classList.remove("empty")
                     emptyCells[i].replaceWith(emptyCells[i].cloneNode());
@@ -186,27 +179,7 @@ class gameTicTacToe {
     getActiveTimeParam() {
         return document.querySelector('input[name="pluginTimeRange"]:checked').value
     }
-    /*
-    timeParameterActive(){
-        if (document.getElementById("plugin15s").checked == true){
-            return 15
-        }
-        if (document.getElementById("plugin30s").checked){
-            return 30
-        }
-        if (document.getElementById("pluginTimeless").checked){
-            return null
-        }
-    }
-    */
-   /*
-    setTimeParamListener() {
-        let self = this
-        this.timeParam.forEach(function(radioButton) {
-            radioButton.addEventListener('click', self.getActiveTimeParam)
-        })
-    }
-*/
+
     showTime(actualTime) {
         if (actualTime < 10){
             this.timeBox.innerHTML = "00:0"+actualTime;
@@ -257,35 +230,27 @@ class gameTicTacToe {
     setActivePlayer() {
         let self = this;
         let firstPlayer = document.querySelector('input[name="pluginFirstPlayer"]:checked').value;
-
+        let activePlayer = document.querySelectorAll(".activePlayer");
         if ( firstPlayer == 'formRandom'){
             console.log("random");
-            //pour le moment déternime le premier joueur de façon aléatoire
             this.activePlayer = this.players[Math.floor(Math.random() * 2)];
             this.switchPlayer(this);
         }else if (firstPlayer == 'formLastWinner'){
             this.activePlayer = this.lastWinner;
-            console.log("formLastWinner");
-
         }else if (firstPlayer == 'formLastLoser'){
             if (self.lastWinner == 'x'){
-                self.activePlayer = 'o';
+                self.activePlayer = this.players[0];
             }else{
-                self.activePlayer = 'x';
+                self.activePlayer = this.players[1];
             };
             this.switchPlayer(this);
-            console.log("formLastLoser");
-
         }else if (firstPlayer == 'formPlayerHost'){
-            console.log("formPlayerHost")
             this.activePlayer = this.players[1];
             this.switchPlayer(this)
         }else{
-            console.log("formPlayerGuest");
             this.activePlayer = this.players[0];
             this.switchPlayer(this)
         }
-        
     }
 
     //FIN 
@@ -294,16 +259,21 @@ class gameTicTacToe {
         for(let i=0; i< this.timeParam.length; i++){
             this.timeParam[i].disabled=true;
         }
+        for(let i=0; i< this.firstPlayerParam.length; i++){
+            this.firstPlayerParam[i].disabled=true;
+        }
     }
 
     enableParameters(){
         for(let i=0; i< this.timeParam.length; i++){
             this.timeParam[i].disabled=false;
         }
+        for(let i=0; i< this.firstPlayerParam.length; i++){
+            this.firstPlayerParam[i].disabled=false;
+        }
     }
 
 }
-
 
 
 window.onload = function(){
