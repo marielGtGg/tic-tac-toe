@@ -12,11 +12,9 @@ class gameTicTacToe {
         this.board = document.querySelector("#pluginGameBoard");
         this.cells = document.getElementsByClassName("pluginGameCell");
         this.scores = {
-            X: 0,
-            O: 0,
+            x: 0,
+            o: 0,
         };
-        this.scoreHost = [0, 0]; /* Win/Lost */
-        this.scoreGuest = [0, 0]; /* Win/Lost */
         this.players = ["x", "o"];
         this.lastWinner = "x";
         this.host = document.querySelector("#pluginHostPlayer");
@@ -87,9 +85,12 @@ class gameTicTacToe {
         return false;  
     }
 
-    updateScore() {
-        //augmenter de 1 dans this.scoreHost et this.scoreGuest
-        //aller chercher le bon Li .innerHtml = this.scoreHost[0]
+   updateScore() {
+        this.scores[this.activePlayer]+=1
+        document.getElementById("pluginHostWon").innerHTML = this.scores.x + " victoire" + (this.scores.x>1 ? "s" : "");
+        document.getElementById("pluginGuestWon").innerHTML = this.scores.o + " victoire" + (this.scores.o>1 ? "s" : "");
+        document.getElementById("pluginHostLost").innerHTML = this.scores.o + " défaite" + (this.scores.o>1 ? "s" : "");
+        document.getElementById("pluginGuestLost").innerHTML = this.scores.x + " défaite" + (this.scores.x>1 ? "s" : "");   
     }
 
     getEmptyCells() {
