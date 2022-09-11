@@ -146,8 +146,6 @@ class gameTicTacToe {
         }   
     }
 
-    
-    
     switchPlayer() {
         this.activePlayer = this.activePlayer == this.players[0] ? this.players[1] : this.players[0];
         
@@ -225,35 +223,45 @@ class gameTicTacToe {
 
     //FIN Fonctions liées au timer
 
-    //DEBUT Fonctions liées au Premier Joueur
+    //DEBUT Fonction liée au Premier Joueur
 
     setActivePlayer() {
-        let self = this;
         let firstPlayer = document.querySelector('input[name="pluginFirstPlayer"]:checked').value;
         let activePlayer = document.querySelectorAll(".activePlayer");
         if ( firstPlayer == 'formRandom'){
-            console.log("random");
             this.activePlayer = this.players[Math.floor(Math.random() * 2)];
             this.switchPlayer(this);
+            return
         }else if (firstPlayer == 'formLastWinner'){
-            this.activePlayer = this.lastWinner;
-        }else if (firstPlayer == 'formLastLoser'){
-            if (self.lastWinner == 'x'){
-                self.activePlayer = this.players[0];
+            if (this.lastWinner == 'o'){
+                this.activePlayer = this.players[0];
             }else{
-                self.activePlayer = this.players[1];
+                this.activePlayer = this.players[1];
             };
             this.switchPlayer(this);
+            return
+        }else if (firstPlayer == 'formLastLoser'){
+            if (this.lastWinner == 'x'){
+                this.activePlayer = this.players[0];
+            }else{
+                this.activePlayer = this.players[1];
+            };
+            this.switchPlayer(this);
+            return
         }else if (firstPlayer == 'formPlayerHost'){
             this.activePlayer = this.players[1];
-            this.switchPlayer(this)
+            this.switchPlayer(this);
+            return
         }else{
             this.activePlayer = this.players[0];
-            this.switchPlayer(this)
+            this.switchPlayer(this);
+            return
         }
     }
 
-    //FIN 
+    //FIN Fonction liée au Premier Joueur
+
+    //DEBUT Fonctions de de-/bloquage de formulaire 
 
     disableParameters(){
         for(let i=0; i< this.timeParam.length; i++){
@@ -273,7 +281,10 @@ class gameTicTacToe {
         }
     }
 
+    //FIN Fonctions de de-/bloquage de formulaire 
 }
+
+
 
 
 window.onload = function(){
