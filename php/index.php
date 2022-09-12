@@ -1,10 +1,10 @@
 <div id="ticTacToeLudo101">
     <div id="pluginHeader">
         <div id="pluginTitle">
-            <img id="title" src="../wp-content/plugins/tic-tac-toe/images/tictactoe.svg" alt="Tic-Tac-Toe">
+            <img id="title" src="wp-content/plugins/tic-tac-toe/images/tictactoe.svg" alt="Tic-Tac-Toe">
             <p>QUE LE MEILLEUR GAGNE!</p>
         </div>
-        <img id="logo" src="../wp-content/plugins/tic-tac-toe/images/ludo101.svg" alt="Logo">
+        <img id="logo" src="wp-content/plugins/tic-tac-toe/images/ludo101.svg" alt="Logo">
     </div>
     <div id="pluginBody">
         <section id="pluginPlayers">
@@ -17,7 +17,7 @@
                 </ul>
             </div>
             <div id="pluginGuestPlayer" class="box-shadow">
-                <h2 class="pluginPlayerName" id="pluginGuest">Monsieur Tac</h2>
+                <h2 class="pluginPlayerName" id="pluginGuest">Invité</h2>
                 <h3 class="pluginPlayerNumber">JOUEUR 2</h3>        
                 <ul>
                     <li id="pluginGuestWon">0 victoire</li>
@@ -29,7 +29,7 @@
             <p id="pluginTimeShow">00:15</p>
         </section>
        <section id="pluginGameContainer">
-            <div id="pluginGameBoard" class="">
+            <div id="pluginGameBoard">
                 <div id="cell-0" class="pluginGameCell empty"></div>
                 <div id="cell-1" class="pluginGameCell empty"></div>
                 <div id="cell-2" class="pluginGameCell empty"></div>
@@ -93,8 +93,8 @@
         <!-- Fenetre modale -->
         <div id="pluginModalWrapper" class="">
             <div id="pluginModalWindow">
-                <label for="GuestNameInput">Qui vous affronte aujourd'hui?</label>
-                <input type="text" name="pluginGuestNameInput" id="GuestNameInput" placeholder="Nom du joueur 2" maxlength="10" >
+                <label for="guestNameInput">Qui vous affronte aujourd'hui?</label>
+                <input type="text" name="pluginGuestNameInput" id="guestNameInput" placeholder="Nom du joueur 2" maxlength="10" >
                 <div id="buttonAccept">JOUER</div>
             </div>
         </div> 

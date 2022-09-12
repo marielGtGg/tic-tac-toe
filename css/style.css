@@ -8,6 +8,7 @@
     --boxshadow: #00000080;
     --boxBackground: #4e1d50b0;
     --highlight: #01a7be60;
+    --primaryLight: #f5b106b0;
 
     /*-----Background Colors-----*/
     --background: #FFFFFF75;
@@ -237,9 +238,9 @@
     padding: 1.95%;
 }
 
-/*-----Bouton radio-----*/
+/*-----Boutons radio-----*/
 
-input[type="radio"] {
+#ticTacToeLudo101 #pluginParameters input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -254,10 +255,19 @@ input[type="radio"] {
     border-radius: 50%;
 }
 
-input[type="radio"]:checked {
+#ticTacToeLudo101 #pluginParameters input[type="radio"]:checked {
     background-color: var(--primary);
 }
 
+/*-----Params disabled-----*/
+
+#ticTacToeLudo101 #pluginParameters.disabled label {
+    color: var(--primaryLight);
+}
+
+#ticTacToeLudo101 #pluginParameters.disabled input[type="radio"]:checked {
+    background-color: var(--primaryLight);
+}
 
 /*-----Grille-----*/
 
@@ -458,10 +468,6 @@ input[type="radio"]:checked {
     background-color: rgba(0,0,0,0.4); 
     border-radius: var(--mainBorderRadius);
     padding: 35vmin 0 0; 
-    /*
-    z-index: 1; 
-    overflow: auto; 
-    */
 }
 
 #ticTacToeLudo101 #pluginModalWindow {
