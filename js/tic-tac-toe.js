@@ -11,9 +11,9 @@ class gameTicTacToe {
         this.lastWinner = "x";
         this.host = document.querySelector("#pluginHostPlayer");
         this.guest = document.querySelector("#pluginGuestPlayer");
-        this.timeBox = document.querySelector("#pluginTimeShow")
-        this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]')
-        this.firstPlayerParam = document.querySelectorAll('input[name="pluginFirstPlayer"]')
+        this.timeBox = document.querySelector("#pluginTimeShow");
+        this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]');
+        this.firstPlayerParam = document.querySelectorAll('input[name="pluginFirstPlayer"]');
         this.runningTimer;
 
         this.winConditions = [
@@ -92,7 +92,7 @@ class gameTicTacToe {
         let self = this;
         document.getElementById("pluginResetGrid").addEventListener("click",function(){
             self.resetBoard();
-        })    
+        });    
     }
 
     resetBoard() {
@@ -145,10 +145,10 @@ class gameTicTacToe {
     //DÉBUT Fonctions de déroulement du jeu
 
     setEventToGrid() {
-        let self = this //permet de référer à la classe dans la fonction imbriquée
+        let self = this; //permet de référer à la classe dans la fonction imbriquée
         const onClick = function() {
             playTurn(this);
-        }
+        };
 
         for (let i = 0; i < this.cells.length; i++) {
             this.cells[i].replaceWith(this.cells[i].cloneNode()); //retire tous les eventListeners (pour le cas d'un reset où il reste des eventListener sur certaines cases)
@@ -262,7 +262,7 @@ class gameTicTacToe {
     //DEBUT Fonctions de de-/bloquage de formulaire 
 
     disableParameters() {
-        document.querySelector("#pluginParameters").classList.add('disabled')
+        document.querySelector("#pluginParameters").classList.add('disabled');
         for (let i = 0; i < this.timeParam.length; i++) {
             this.timeParam[i].disabled=true;
 
@@ -273,7 +273,7 @@ class gameTicTacToe {
     }
 
     enableParameters() {
-        document.querySelector("#pluginParameters").classList.remove('disabled')
+        document.querySelector("#pluginParameters").classList.remove('disabled');
         for (let i = 0; i < this.timeParam.length; i++) {
             this.timeParam[i].disabled=false;
         }
@@ -294,7 +294,7 @@ window.onload = function(){
     game.setPlayButtonGetName();
     game.setEventToGrid();
 
-}
+};
     
 
 
