@@ -15,6 +15,7 @@ class gameTicTacToe {
         this.timeParam = document.querySelectorAll('input[name="pluginTimeRange"]');
         this.firstPlayerParam = document.querySelectorAll('input[name="pluginFirstPlayer"]');
         this.runningTimer;
+
         this.winConditions = [
             ["r1", [0, 1, 2]],
             ["r2", [3, 4, 5]],
@@ -25,6 +26,7 @@ class gameTicTacToe {
             ["d1", [0, 4, 8]],
             ["d2", [2, 4, 6]]
         ];
+
         this.boardStatus = [
             "empty",
             "empty",
@@ -282,6 +284,9 @@ class gameTicTacToe {
 
     //FIN Fonctions de de-/bloquage de formulaire 
 }
+
+
+
 
 window.onload = function(){
     let game = new gameTicTacToe(); 
