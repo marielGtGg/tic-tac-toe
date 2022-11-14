@@ -24,7 +24,7 @@
     margin-right: 0;
     max-width: 1000px;
     box-sizing: border-box;
-    background: url(images/perspective.svg), radial-gradient(var(--backgroundGradient));
+    background: url(../images/perspective.svg), radial-gradient(var(--backgroundGradient));
     background-size: cover;
     background-position: center top;
     border-radius: var(--mainBorderRadius);
@@ -159,14 +159,14 @@
 }
 
 #ticTacToeLudo101 #pluginHostPlayer {
-    background-image: url(images/x-shaded.svg);
+    background-image: url(../images/x-shaded.svg);
     background-size: 2.5rem;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
 }
 
 #ticTacToeLudo101 #pluginGuestPlayer {
-    background-image: url(images/o-shaded.svg);
+    background-image: url(../images/o-shaded.svg);
     background-size: 2.5rem;
     background-repeat: no-repeat;
     background-position: bottom .5rem right .5rem;
@@ -180,11 +180,11 @@
 }
 
 #ticTacToeLudo101 #pluginHostPlayer.activePlayer {
-    background-image: url(images/x.svg);
+    background-image: url(../images/x.svg);
 }
 
 #ticTacToeLudo101 #pluginGuestPlayer.activePlayer {
-    background-image: url(images/o.svg);
+    background-image: url(../images/o.svg);
 }
 
 /*-----Temps-----*/
@@ -297,7 +297,7 @@
 
 #ticTacToeLudo101 #pluginGameBoard::before {
     content: '';
-    background-image: url(images/grille.svg);
+    background-image: url(../images/grille.svg);
     background-size: contain;
     grid-row: 1 / -1;
     grid-column: 1 / -1;
@@ -346,11 +346,11 @@
 }
 
 #ticTacToeLudo101 .pluginGameCell.o {
-    background-image: url(images/o.svg);
+    background-image: url(../images/o.svg);
 }
 
 #ticTacToeLudo101 .pluginGameCell.x {
-    background-image: url(images/x.svg);
+    background-image: url(../images/x.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.d1::after,
@@ -373,83 +373,83 @@
 /*---Win-O---*/
 
 #ticTacToeLudo101 #pluginGameBoard.o.d1::after {
-    background-image: url(images/win-o.svg), url(images/d1.svg);
+    background-image: url(../images/win-o.svg), url(../images/d1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.d2::after {
-    background-image: url(images/win-o.svg), url(images/d2.svg);
+    background-image: url(../images/win-o.svg), url(../images/d2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.r1::after {
-    background-image: url(images/win-o.svg), url(images/r1.svg);
+    background-image: url(../images/win-o.svg), url(../images/r1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.r2::after {
-    background-image: url(images/win-o.svg), url(images/r2.svg);
+    background-image: url(../images/win-o.svg), url(../images/r2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.r3::after {
-    background-image: url(images/win-o.svg), url(images/r3.svg);
+    background-image: url(../images/win-o.svg), url(../images/r3.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.c1::after {
-    background-image: url(images/win-o.svg), url(images/c1.svg);
+    background-image: url(../images/win-o.svg), url(../images/c1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.c2::after {
-    background-image: url(images/win-o.svg), url(images/c2.svg);
+    background-image: url(../images/win-o.svg), url(../images/c2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o.c3::after {
-    background-image: url(images/win-o.svg), url(images/c3.svg);
+    background-image: url(../images/win-o.svg), url(../images/c3.svg);
 }
 
 /*---Win-X---*/
 
 #ticTacToeLudo101 #pluginGameBoard.x.d1::after {
-    background-image: url(images/win-x.svg), url(images/d1.svg);
+    background-image: url(../images/win-x.svg), url(../images/d1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.d2::after {
-    background-image: url(images/win-x.svg), url(images/d2.svg);
+    background-image: url(../images/win-x.svg), url(../images/d2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.r1::after {
-    background-image: url(images/win-x.svg), url(images/r1.svg);
+    background-image: url(../images/win-x.svg), url(../images/r1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.r2::after {
-    background-image: url(images/win-x.svg), url(images/r2.svg);
+    background-image: url(../images/win-x.svg), url(../images/r2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.r3::after {
-    background-image: url(images/win-x.svg), url(images/r3.svg);
+    background-image: url(../images/win-x.svg), url(../images/r3.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.c1::after {
-    background-image: url(images/win-x.svg), url(images/c1.svg);
+    background-image: url(../images/win-x.svg), url(../images/c1.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.c2::after {
-    background-image: url(images/win-x.svg), url(images/c2.svg);
+    background-image: url(../images/win-x.svg), url(../images/c2.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x.c3::after {
-    background-image: url(images/win-x.svg), url(images/c3.svg);
+    background-image: url(../images/win-x.svg), url(../images/c3.svg);
 }
 
 /*---Autre---*/
 
 #ticTacToeLudo101 #pluginGameBoard.null::after {
-    background-image: url(images/null.svg);
+    background-image: url(../images/null.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.x .pluginGameCell.empty:hover {
-    background-image: url(images/x-shaded.svg);
+    background-image: url(../images/x-shaded.svg);
 }
 
 #ticTacToeLudo101 #pluginGameBoard.o .pluginGameCell.empty:hover {
-    background-image: url(images/o-shaded.svg);
+    background-image: url(../images/o-shaded.svg);
 }
 
 /*---fenêtre modale---*/
