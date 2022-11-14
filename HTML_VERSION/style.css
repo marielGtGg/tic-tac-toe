@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;600&display=swap');
+
+:root {
+    /*-----Elements colors-----*/
+    --primary: #f5b106;
+    --secondary: #01a7be;
+    --third: #dd38b7;
+    --boxshadow: #00000080;
+    --boxBackground: #4e1d50b0;
+    --highlight: #01a7be60;
+    --primaryLight: #f5b106b0;
+
+    /*-----Background Colors-----*/
+    --background: #FFFFFF75;
+    --backgroundGradient: circle, var(--third) 0%, rgba(78, 29, 80, 1) 75%, rgba(17, 18, 36, 1) 100%;
+
+    /*-----Sizing-----*/
+    --mainBorderRadius: .7rem;
+}
+
+
+#ticTacToeLudo101 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1000px;
+    box-sizing: border-box;
+    background: url(images/perspective.svg), radial-gradient(var(--backgroundGradient));
+    background-size: cover;
+    background-position: center top;
+    border-radius: var(--mainBorderRadius);
+    padding: 1.5rem;
+    box-shadow: 0 .5rem .5rem var(--boxshadow);
+    position: relative;
+}
+
+#ticTacToeLudo101 div,
+#ticTacToeLudo101 h1,
+#ticTacToeLudo101 h2,
+#ticTacToeLudo101 h3,
+#ticTacToeLudo101 h4,
+#ticTacToeLudo101 p,
+#ticTacToeLudo101 ul {
+    font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: var(--primary);
+    margin: 0;
+}
+
+#ticTacToeLudo101 .box-shadow {
+    border: 1px solid var(--third);
+    border-radius: .3rem;
+    padding: 1.5rem;
+    box-shadow: 0 .2rem .2rem var(--boxshadow);
+    background: var(--boxBackground);
+}
+
+#ticTacToeLudo101 ul {
+    list-style: none;
+    padding: 0;
+}
+
+#ticTacToeLudo101 img {
+    display: block;
+}
+
+/*-----Entête-----*/
+
+#ticTacToeLudo101 #pluginHeader {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    border-bottom: .25rem solid var(--secondary);
+}
+
+#ticTacToeLudo101 #pluginHeader p {
+    font-size: 0.9rem;
+    padding: .2rem 0 0 .5rem;
+}
+
+#ticTacToeLudo101 #pluginHeader #title {
+    max-width: 100%;
+    height: 40px;
+}
+
+#ticTacToeLudo101 #pluginHeader #logo {
+    height: 70px;
+    padding: .2rem;
+}
+
+/*-----Responsive Body-----*/
+
+@media screen and (min-width: 768px) {
+    #ticTacToeLudo101 #pluginBody {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: minmax(auto, 60%) minmax(min-content, auto);
+        grid-template-areas:
+            "game players"
+            "game time"
+            "game parameters";
+        row-gap: 1rem;
+        column-gap: 2rem;
+    }
+
+    #ticTacToeLudo101 #pluginPlayers {
+        grid-area: players;
+        align-self: start;
+    }
+
+    #ticTacToeLudo101 #pluginTime{
+        grid-area: time;
+        align-self: start;
+
+    }
+
+    #ticTacToeLudo101 #pluginGameContainer {
+        grid-area: game;
+        align-self: start;
+    }
+
+    #ticTacToeLudo101 #pluginParameters {
+        grid-area: parameters;
+        align-self: end;
+    }
+
+    #ticTacToeLudo101 #pluginBody > section {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+/*-----Joueurs-----*/
+
+#ticTacToeLudo101 #pluginPlayers {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+#ticTacToeLudo101 #pluginPlayers > div {
+    flex-grow: 1;
+}
+
+#ticTacToeLudo101 #pluginPlayers h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#ticTacToeLudo101 #pluginPlayers h3 {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+#ticTacToeLudo101 #pluginPlayers li {
+    font-size: .9rem;
+}
+
+#ticTacToeLudo101 #pluginHostPlayer {
+    background-image: url(images/x-shaded.svg);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: bottom .5rem right .5rem;
+}
+
+#ticTacToeLudo101 #pluginGuestPlayer {
+    background-image: url(images/o-shaded.svg);
+    background-size: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: bottom .5rem right .5rem;
+}
+
+#ticTacToeLudo101 #pluginPlayers .activePlayer {
+    background-color: var(--highlight);
+    border-bottom-width: 5px;
+    border-color: var(--secondary);
+    box-shadow: 0 7px 7px var(--boxshadow);
+}
+
+#ticTacToeLudo101 #pluginHostPlayer.activePlayer {
+    background-image: url(images/x.svg);
+}
+
+#ticTacToeLudo101 #pluginGuestPlayer.activePlayer {
+    background-image: url(images/o.svg);
+}
+
+/*-----Temps-----*/
+
+#ticTacToeLudo101 #pluginTime {
+    padding: .5rem;
+    font-size: 3rem;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: .5rem;
+}
+
+/*-----Paramètres-----*/
+
+#ticTacToeLudo101 #pluginParameters form {
+    margin: 0rem 0 1rem;
+    display: flex;
+}
+
+#ticTacToeLudo101 #pluginParameters form > section:first-of-type {
+    margin-right: 1rem;
+}
+
+#ticTacToeLudo101 #pluginParameters form > section {
+    flex-grow: 1;
+}
+
+#ticTacToeLudo101 #pluginParameters h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+#ticTacToeLudo101 #pluginParameters li {
+    font-size: .9rem;
+}
+
+#ticTacToeLudo101 #pluginParameters .button {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: all ease 0.7s;
+}
+
+#ticTacToeLudo101 #pluginParameters .button:hover {
+    background-color: var(--third);
+    color: black;
+    font-size: medium;
+    letter-spacing: .4rem;
+    padding: 1.95%;
+}
+
+/*-----Boutons radio-----*/
+
+#ticTacToeLudo101 #pluginParameters input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 1.2px;
+    background-clip: content-box;
+    border: 1px solid var(--third);
+    /*background-color: #fbebfb;*/
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+#ticTacToeLudo101 #pluginParameters input[type="radio"]:checked {
+    background-color: var(--primary);
+}
+
+/*-----Params disabled-----*/
+
+#ticTacToeLudo101 #pluginParameters.disabled label {
+    color: var(--primaryLight);
+}
+
+#ticTacToeLudo101 #pluginParameters.disabled input[type="radio"]:checked {
+    background-color: var(--primaryLight);
+}
+
+/*-----Grille-----*/
+
+#ticTacToeLudo101 #pluginGameContainer {
+    position: relative;
+    padding-top: 100%;
+    width: 100%;
+    margin: 3rem auto;
+}
+
+#ticTacToeLudo101 #pluginGameBoard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5%;
+    grid-template-areas:
+        "cell-0 cell-1 cell-2"
+        "cell-3 cell-4 cell-5"
+        "cell-6 cell-7 cell-8";
+}
+
+#ticTacToeLudo101 #pluginGameBoard::before {
+    content: '';
+    background-image: url(images/grille.svg);
+    background-size: contain;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+#ticTacToeLudo101 .pluginGameCell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ticTacToeLudo101 #cell-0 {
+    grid-area: cell-0;
+}
+
+#ticTacToeLudo101 #cell-1 {
+    grid-area: cell-1;
+}
+
+#ticTacToeLudo101 #cell-2 {
+    grid-area: cell-2;
+}
+
+#ticTacToeLudo101 #cell-3 {
+    grid-area: cell-3;
+}
+
+#ticTacToeLudo101 #cell-4 {
+    grid-area: cell-4;
+}
+
+#ticTacToeLudo101 #cell-5 {
+    grid-area: cell-5;
+}
+
+#ticTacToeLudo101 #cell-6 {
+    grid-area: cell-6;
+}
+
+#ticTacToeLudo101 #cell-7 {
+    grid-area: cell-7;
+}
+
+#ticTacToeLudo101 #cell-8 {
+    grid-area: cell-8;
+}
+
+#ticTacToeLudo101 .pluginGameCell.o {
+    background-image: url(images/o.svg);
+}
+
+#ticTacToeLudo101 .pluginGameCell.x {
+    background-image: url(images/x.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.d1::after,
+#ticTacToeLudo101 #pluginGameBoard.d2::after,
+#ticTacToeLudo101 #pluginGameBoard.r1::after,
+#ticTacToeLudo101 #pluginGameBoard.r2::after,
+#ticTacToeLudo101 #pluginGameBoard.r3::after,
+#ticTacToeLudo101 #pluginGameBoard.c1::after,
+#ticTacToeLudo101 #pluginGameBoard.c2::after,
+#ticTacToeLudo101 #pluginGameBoard.c3::after,
+#ticTacToeLudo101 #pluginGameBoard.null::after {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+/*---Win-O---*/
+
+#ticTacToeLudo101 #pluginGameBoard.o.d1::after {
+    background-image: url(images/win-o.svg), url(images/d1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.d2::after {
+    background-image: url(images/win-o.svg), url(images/d2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.r1::after {
+    background-image: url(images/win-o.svg), url(images/r1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.r2::after {
+    background-image: url(images/win-o.svg), url(images/r2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.r3::after {
+    background-image: url(images/win-o.svg), url(images/r3.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.c1::after {
+    background-image: url(images/win-o.svg), url(images/c1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.c2::after {
+    background-image: url(images/win-o.svg), url(images/c2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o.c3::after {
+    background-image: url(images/win-o.svg), url(images/c3.svg);
+}
+
+/*---Win-X---*/
+
+#ticTacToeLudo101 #pluginGameBoard.x.d1::after {
+    background-image: url(images/win-x.svg), url(images/d1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.d2::after {
+    background-image: url(images/win-x.svg), url(images/d2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.r1::after {
+    background-image: url(images/win-x.svg), url(images/r1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.r2::after {
+    background-image: url(images/win-x.svg), url(images/r2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.r3::after {
+    background-image: url(images/win-x.svg), url(images/r3.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.c1::after {
+    background-image: url(images/win-x.svg), url(images/c1.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.c2::after {
+    background-image: url(images/win-x.svg), url(images/c2.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x.c3::after {
+    background-image: url(images/win-x.svg), url(images/c3.svg);
+}
+
+/*---Autre---*/
+
+#ticTacToeLudo101 #pluginGameBoard.null::after {
+    background-image: url(images/null.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.x .pluginGameCell.empty:hover {
+    background-image: url(images/x-shaded.svg);
+}
+
+#ticTacToeLudo101 #pluginGameBoard.o .pluginGameCell.empty:hover {
+    background-image: url(images/o-shaded.svg);
+}
+
+/*---fenêtre modale---*/
+
+#ticTacToeLudo101 #pluginModalWrapper.hidden {
+    display: none;
+}
+ 
+#ticTacToeLudo101 #pluginModalWrapper {
+    box-sizing: border-box;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    border-radius: var(--mainBorderRadius);
+    padding: 35vmin 0 0; 
+}
+
+#ticTacToeLudo101 #pluginModalWindow {
+    box-sizing: border-box;
+    background-color: #4e1d50d0;
+    padding: 10vmin 5vmin;
+    border-top: 3px solid var(--third);
+    border-bottom: 3px solid var(--third);
+}
+
+#ticTacToeLudo101 #pluginModalWindow label {
+    display: block;
+    text-align: center;
+}
+
+#ticTacToeLudo101 #pluginModalWindow input {
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    display: block;
+    margin: .75rem auto 2rem;
+    padding: .25rem 0;
+}
+
+#ticTacToeLudo101 #pluginModalWindow #buttonAccept {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    line-height: normal;
+    transition: all ease .5s;
+}
+
+#ticTacToeLudo101 #pluginModalWindow #buttonAccept:hover {
+    color: var(--secondary);
+}
+
+@media screen and (min-width: 768px){
+
+    #ticTacToeLudo101 #pluginModalWindow label,
+    #ticTacToeLudo101 #pluginModalWindow input,
+    #ticTacToeLudo101 #pluginModalWindow #buttonAccept {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+} 
